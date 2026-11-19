@@ -1,0 +1,996 @@
+<!doctype html>
+<html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><link rel="icon" href="logo.webp"><meta name="description" content="觸口自然教育中心 19期森林學堂 2027 課程與預約">
+<style>html{box-sizing:border-box}body{margin:0;padding:0}</style>
+<title>觸口自然教育中心</title></head><body>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap">
+<style>
+/* Layout: brochure-faithful one-page site. Hero with cover art, wildlife stickers, the brochure's "你的身分是？" guide (3 columns, 5 types) as navigation, then searchable course cards per audience. #about is a second view. */
+:root{
+  --bg:#EDE0D2; --card:#F8F2E2; --tile:#E9E4D6; --ink:#3A3226; --ink2:#6F6450; --line:#D8C9B2;
+  --gold:#A9987C; --green:#8DB04A; --green-d:#4C6A24; --lime:#B3C032; --mauve:#A5857A; --teal:#5FB0BB; --teal-d:#2F7F8B;
+  --t-nature:#4A7FA5; --t-forest:#6F9148; --t-resil:#C2742A;
+  --frame:#E9DDCC; --on-green:#fff; --pill:#DCD5C4; --input:#FBF7EC;
+  color-scheme:light; --font:'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--font);line-height:1.75;font-size:16px}
+a{color:inherit}
+img{max-width:100%}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+section{padding-block:56px;scroll-margin-top:64px}
+h1,h2,h3{margin:0;line-height:1.3;text-wrap:balance}
+.eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:700}
+h2{font-size:clamp(24px,4vw,34px);font-weight:900;margin-top:6px;display:inline-block;max-width:100%;background:#CECC31;color:#2E3410;padding:4px 20px 6px;border-radius:6px}
+.lead{color:var(--ink2);max-width:38em;margin:10px 0 0}
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;gap:18px;height:56px;overflow-x:auto;scrollbar-width:none}
+.nav .wrap::-webkit-scrollbar{display:none}
+.nav .brand{flex:none}
+.brand{font-weight:900;font-size:17px;text-decoration:none;margin-right:auto;white-space:nowrap}
+.nav a.l{font-size:14px;text-decoration:none;color:var(--ink2);white-space:nowrap}
+.nav a.l:hover{color:var(--ink)}
+@media(max-width:900px){.brand{margin-right:6px}.nav .wrap{gap:16px}}
+a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible{outline:3px solid var(--t-nature);outline-offset:3px}
+/* hero */
+.hero{padding-block:32px 8px}
+.hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
+.vol{display:inline-block;background:#CECC31;color:#2E3410;font-weight:700;padding:5px 16px;font-size:15px}
+.ttl{display:flex;align-items:center;gap:14px;margin-top:16px}
+.ttl h1{margin-top:0}
+.logo{height:clamp(88px,12vw,128px);width:auto;flex:0 0 auto}
+.hero h1{font-size:clamp(34px,5.4vw,56px);font-weight:900;letter-spacing:.02em}
+.hero .en{color:var(--gold);letter-spacing:.14em;font-weight:700;font-size:13px;text-transform:uppercase;margin-top:6px}
+.hero p{color:var(--ink2);max-width:26em;margin:14px 0 0}
+.btn{display:inline-block;background:var(--ink);color:var(--bg);padding:12px 24px;font-weight:700;text-decoration:none;border-radius:999px;margin-top:18px}
+.btn.alt{background:transparent;color:var(--ink);border:2px solid var(--ink);padding:10px 22px;margin-top:0}
+.art{position:relative;min-width:0}
+.art::before{content:"";position:absolute;inset:8% 4% 2% 4%;background:var(--card);border-radius:48% 52% 46% 54%/55% 45% 55% 45%}
+.art img{position:relative;display:block;width:100%;height:auto}
+@media(max-width:760px){.hero .wrap{grid-template-columns:1fr}}
+/* creatures */
+.strip{display:flex;gap:14px;overflow-x:auto;padding:6px 2px 18px;margin-top:22px;scroll-snap-type:x proximity}
+.cr{flex:0 0 176px;scroll-snap-align:start;background:var(--card);border-radius:18px;padding:12px 12px 14px;text-align:center}
+.cr .ph{height:140px;display:flex;align-items:center;justify-content:center;background:var(--frame);border-radius:12px;padding:10px}
+.cr img{max-height:100%;max-width:100%;object-fit:contain;display:block}
+.cr{text-decoration:none;color:inherit;display:block}.cr:hover{box-shadow:0 4px 14px rgba(0,0,0,.14)}.cr:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+.cr .nm{margin-top:10px;font-weight:700;font-size:15px}.cr .nm small{display:block;font-weight:400;font-size:12px;color:var(--ink2);margin-top:2px}
+.inat{margin-top:6px;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.inat span{color:var(--ink2);font-size:14px;max-width:34em}
+/* guide (brochure style) */
+.guide .q{color:var(--gold);font-size:18px;margin:26px 0 0}
+.gcols{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:20px;align-items:stretch}
+.gcol{background:var(--card);border-radius:24px;padding:0 16px 18px;margin-top:70px;display:flex;flex-direction:column;gap:14px;min-width:0}
+.pet{height:112px;margin-top:-70px;display:flex;align-items:flex-end;pointer-events:none}
+.pet img{height:100%;width:auto;display:block}
+.pet.mid{justify-content:center}.pet.right{justify-content:flex-end;height:140px;margin-top:-98px}
+.gcol .pet+.gt{margin-top:-14px}
+.gt{background:var(--tile);border-radius:18px;padding:16px 18px 18px;position:relative;display:flex;flex-direction:column;gap:6px;min-width:0}
+.gt small{font-size:15px;color:var(--ink)}
+.gt strong{font-size:23px;font-weight:900;color:var(--c)}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 4px}
+.pills span{background:var(--pill);border-radius:999px;padding:1px 14px;font-size:14px}
+.go{align-self:flex-start;background:var(--c);color:#fff;text-decoration:none;font-weight:700;font-size:14px;padding:5px 18px;border-radius:999px}
+.go:hover{filter:brightness(.94)}
+.note{margin:auto;text-align:center;color:var(--ink2);font-size:14px;padding:12px 8px}
+@media(max-width:860px){.gcols{grid-template-columns:1fr;gap:6px}.gcol{margin-top:100px}.gcols .gcol:first-child{margin-top:80px}}
+/* course area */
+.finder{background:var(--card);border-block:1px solid var(--line);padding-block:28px}
+.search{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.search input{flex:1 1 260px;min-width:0;font:inherit;padding:12px 18px;border-radius:999px;border:2px solid var(--line);background:var(--input);color:var(--ink)}
+.search span{font-size:14px;color:var(--ink2)}
+.sec .head{display:flex;gap:14px;align-items:baseline;flex-wrap:wrap}
+.who{font-size:14px;color:var(--ink2);margin:8px 0 0}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px;align-items:center}
+.chips b{font-size:13px;color:var(--ink2);margin-right:2px;font-weight:700}
+.chip{font:inherit;font-size:14px;border:1.5px solid var(--line);background:transparent;color:var(--ink);border-radius:999px;padding:2px 14px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.grp{margin-top:30px}
+.grp>h3{font-size:19px;font-weight:900;display:flex;align-items:center;gap:10px}
+.grp>h3 i{width:12px;height:12px;border-radius:50%;background:var(--c,var(--gold));display:inline-block}
+.grp>.sub{font-size:14px;color:var(--ink2);margin:2px 0 0}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;margin-top:14px}
+.cd{background:var(--card);border:1px solid var(--line);border-top:5px solid var(--c,var(--gold));border-radius:12px;padding:16px 18px 14px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.cd h4{margin:0;font-size:19px;font-weight:900;line-height:1.35}
+.cd .tg{font-size:12px;font-weight:700;color:var(--c,var(--ink2));letter-spacing:.04em}
+.meta{display:flex;flex-wrap:wrap;gap:6px}
+.meta span{font-size:13px;background:var(--pill);border-radius:6px;padding:0 8px;line-height:1.7}
+.meta .gr{background:var(--c,var(--gold));color:#fff;font-weight:700}
+.pr{font-size:14px;margin:0;color:var(--ink)}
+.pr b{font-variant-numeric:tabular-nums}
+.cd p.ds{margin:0;font-size:15px;color:var(--ink2);line-height:1.7}
+.cd details{margin-top:auto;font-size:14px}
+.cd summary{cursor:pointer;font-weight:700;color:var(--c,var(--ink));padding:2px 0}
+.cd ul{margin:6px 0 0;padding-left:1.2em;color:var(--ink2)}
+.cd ul li{margin:2px 0}
+.cd .nt{font-size:13px;color:var(--ink2);margin:0;border-left:3px solid var(--line);padding-left:8px}
+.date{display:inline-block;font-weight:400;font-size:20px;font-variant-numeric:tabular-nums;color:var(--ink)}
+.date b{font-weight:900}
+.date .wk{font-size:14px;font-weight:400;margin:0 4px 0 1px}
+.date small{font-size:13px;font-weight:500;color:var(--ink2);margin-left:4px}
+.empty{color:var(--ink2);padding:20px 0}
+.band{background:var(--card);border-block:1px solid var(--line)}
+.band .cd{background:var(--bg)}
+.cal{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:20px}
+@media(max-width:700px){.cal{grid-template-columns:1fr}}
+.cal ul{list-style:none;margin:0;padding:0;background:var(--bg);border:1px solid var(--line);border-radius:12px}
+.cal li{display:flex;gap:14px;padding:9px 16px;border-bottom:1px solid var(--line);align-items:baseline}
+.cal li:last-child{border:0}
+.cal li b{min-width:5.2em;font-variant-numeric:tabular-nums}
+.cal h3{font-size:17px;margin:0 0 8px}
+.contact{background:var(--green);color:var(--on-green);padding-block:48px}
+.contact h2{color:#2E3410}
+.contact p{margin:8px 0 0}
+.cgrid{display:grid;grid-template-columns:1.1fr 1fr;gap:32px;align-items:start}
+.cin{margin:10px 0 0}
+.cinfo{margin:22px 0 0;display:grid;gap:12px}
+.cinfo div{display:grid;grid-template-columns:3.5em 1fr;align-items:center;gap:8px;border-top:1px solid rgba(46,52,16,.25);padding-top:12px}
+.cinfo dt{font-size:14px;font-weight:700;color:#2E3410}
+.cinfo dd{margin:0;font-size:18px;font-weight:700}
+.contact .tel{font-size:30px;font-weight:900;font-variant-numeric:tabular-nums}
+.cinfo a{color:inherit}
+.cinfo .gm{display:inline-block;background:#fff;color:#2E3410;text-decoration:none;font-size:15px;padding:6px 18px;border-radius:999px}
+.cr2{background:rgba(255,255,255,.22);border-radius:18px;padding:22px}
+.cr2 h3{margin:0;font-size:20px;font-weight:900}
+.cr2 p{margin:4px 0 0}
+.cr2 .soc{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}
+.cr2 .soc a{justify-content:center}
+@media(max-width:760px){.cgrid{grid-template-columns:1fr}}
+.soc{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.soc a{display:inline-flex;align-items:center;gap:8px;background:#2E3410;color:#fff;text-decoration:none;font-weight:700;padding:8px 18px 8px 14px;border-radius:999px}
+.soc a:hover{filter:brightness(1.25)}
+.soc svg{width:20px;height:20px;fill:currentColor}
+footer{padding-block:28px;font-size:13px;color:var(--ink2)}
+/* about */
+.about .msg{background:var(--card);border-radius:20px;padding:28px clamp(18px,4vw,40px);max-width:760px}
+.about .msg p{margin:0 0 1em}
+.about .sig{color:var(--ink2);margin:0;text-align:right}
+.mv{display:grid;grid-template-columns:auto 1fr;gap:6px 24px;margin-top:20px;max-width:760px}
+.mv dt{font-weight:900;color:var(--green-d)}
+.mv dd{margin:0}
+.themes{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}
+.th{padding:16px 18px;border-radius:12px;color:#fff;min-width:0}
+.th h3{font-size:18px;font-weight:900}
+.th p{margin:6px 0 0;font-size:14px;line-height:1.6}
+@media(max-width:760px){.themes{grid-template-columns:1fr}}
+.back{display:inline-block;font-size:14px;color:var(--ink2);text-decoration:none;border:1px solid var(--line);padding:1px 14px;border-radius:99px}
+
+/* draggable strips */
+.hstrip{cursor:grab;scrollbar-width:thin}
+.hstrip.drag{cursor:grabbing;scroll-snap-type:none;-webkit-user-select:none;user-select:none}
+.hstrip img{-webkit-user-drag:none;pointer-events:none}
+.ctl{display:flex;align-items:center;gap:8px;margin-top:18px;font-size:14px;color:var(--ink2)}
+.ctl span{margin-right:auto}
+.ctl button{font:inherit;font-size:20px;line-height:1;width:38px;height:38px;border-radius:50%;border:2px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer}
+.ctl button:hover{background:var(--ink);color:var(--bg)}
+.fam{display:flex;gap:16px;overflow-x:auto;padding:6px 2px 16px;margin-top:10px}
+.fam .cd{flex:0 0 310px;border-top:0;padding-top:0;overflow:hidden;scroll-snap-align:start}
+.fam .dw{margin:0 -18px 4px;padding:10px 18px;background:var(--c);color:#fff;display:flex;align-items:baseline;gap:10px}
+.fam .dw .date{color:#fff;font-size:26px}
+.fam .dw .date .wk{color:#fff;font-size:14px}
+.fam .dw .wk{font-size:14px;opacity:.95}
+.fam .cd.dim{opacity:.5}
+/* calendar */
+.months{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px;margin-top:22px}
+.mo{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;min-width:0}
+.mo header{background:#CECC31;color:#2E3410;padding:8px 16px;display:flex;align-items:baseline;gap:8px}
+.mo header b{font-size:24px;font-weight:900}.mo header small{font-size:12px;letter-spacing:.1em}
+.mo table{width:100%;border-collapse:collapse;table-layout:fixed;margin:8px 0 0}
+.mo th{font-size:12px;color:var(--ink2);font-weight:500;padding:4px 0}
+.mo td{height:34px;text-align:center;font-size:14px;font-variant-numeric:tabular-nums;padding:2px}
+.mo td span{display:flex;align-items:center;justify-content:center;width:30px;height:30px;margin:0 auto;border-radius:50%}
+.mo td .e1{background:var(--mauve);color:#fff;font-weight:900}
+.mo td .e2{background:var(--teal-d);color:#fff;font-weight:900}
+.mo ul{list-style:none;margin:6px 0 0;padding:8px 14px 12px;border-top:1px dashed var(--line);font-size:14px}
+.mo li{display:flex;gap:8px;margin:3px 0;line-height:1.5}
+.mo li i{flex:0 0 10px;height:10px;border-radius:50%;margin-top:7px}
+.mo li b{font-variant-numeric:tabular-nums;white-space:nowrap}
+.mo li a{text-decoration:none;border-bottom:1px dotted var(--ink2)}
+.legend{display:flex;gap:18px;flex-wrap:wrap;margin-top:16px;font-size:14px;color:var(--ink2)}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:6px;vertical-align:-1px}
+/* back to top */
+#toTop{position:fixed;right:calc(16px + env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:6;width:48px;height:48px;border-radius:50%;border:2px solid #2E3410;background:#CECC31;color:#2E3410;font:inherit;font-size:22px;font-weight:900;cursor:pointer;box-shadow:0 3px 10px rgba(0,0,0,.25);opacity:0;pointer-events:none;transform:translateY(8px);transition:opacity .2s,transform .2s}
+#toTop.show{opacity:1;pointer-events:auto;transform:none}
+@media(prefers-reduced-motion:reduce){#toTop{transition:none}}
+[hidden]{display:none!important}
+.cd{padding:0;gap:0;cursor:pointer;overflow:hidden;transition:box-shadow .15s,transform .15s}
+.cd:hover{box-shadow:0 6px 18px rgba(58,50,38,.12)}
+.cd.flash{animation:flash 1.6s ease 1}
+@keyframes flash{0%,60%{box-shadow:0 0 0 4px var(--c)}100%{box-shadow:0 0 0 0 transparent}}
+.cv{position:relative;aspect-ratio:2/1;background:var(--tile);background:color-mix(in srgb,var(--c,var(--gold)) 16%,var(--card));overflow:hidden}
+.cv img{width:100%;height:100%;object-fit:cover;display:block}
+.cv .tg{position:absolute;left:10px;bottom:8px;background:rgba(248,242,226,.92);padding:0 10px;border-radius:999px}
+.cb{padding:12px 18px 14px;display:flex;flex-direction:column;gap:8px;flex:1}
+.cd .ds{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.ft{margin-top:auto;justify-content:flex-start;display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding-top:4px}
+.pc{flex:1 0 100%;font-size:13px;color:var(--ink2)}
+.pc b{font-size:24px;font-weight:900;color:var(--ink);font-variant-numeric:tabular-nums}
+.pc em{font-style:normal;font-size:14px;color:var(--ink)}
+.cd button{font:inherit;font-size:14px;font-weight:700;border-radius:999px;padding:3px 14px;cursor:pointer}
+.b-d{border:2px solid var(--ink);background:transparent;color:var(--ink)}
+.b-a{border:2px solid var(--c,var(--ink));background:var(--c,var(--ink));color:#fff}
+.b-a.on,.sheet .b-a.on{background:transparent;color:var(--c,var(--ink))}
+.cd .dw{margin:0;padding:10px 18px 2px}
+.fam .dw{margin:0;padding:10px 18px}
+.fam .cd{flex:1}
+.fam .cd{border-top:0;padding-top:0;scroll-snap-align:none}
+.tlitem{flex:0 0 310px;position:relative;padding-top:42px;display:flex;flex-direction:column;scroll-snap-align:start}
+.tlitem::before{content:"";position:absolute;top:15px;left:0;right:-16px;height:4px;background:var(--mauve);opacity:.4}
+.tlitem:last-child::before{right:0}
+.tlitem>i{position:absolute;top:7px;left:0;width:20px;height:20px;border-radius:50%;background:var(--mauve);border:4px solid var(--bg)}
+.tlitem>b{position:absolute;top:0;left:30px;font-size:18px;font-weight:900;color:var(--ink)}
+.fbar{display:grid;gap:10px;margin-top:18px}
+.fbar .chips{margin-top:0}
+.fbar small{font-size:12.5px;color:var(--ink2);margin-left:4px}
+.fcount{font-size:14px;color:var(--ink2);margin:10px 0 0;min-height:1.6em}
+.fcount button{font:inherit;font-size:13px;border:0;background:none;color:var(--t-nature);text-decoration:underline;cursor:pointer;padding:0 6px}
+.empty b{display:block;color:var(--ink);margin-bottom:2px}
+.ovw{margin-top:22px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:6px 16px 14px}
+.ovw summary{cursor:pointer;font-weight:900;font-size:17px;padding:10px 0}
+.ovs{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.ovt{border-collapse:separate;border-spacing:0;min-width:760px;width:100%;font-size:13.5px}
+.ovt th,.ovt td{border-bottom:1px solid var(--line);padding:8px 6px;vertical-align:top;text-align:left}
+.ovt thead th{font-size:12.5px;color:var(--ink2);font-weight:700;white-space:nowrap}
+.ovt thead th small{display:block;font-weight:400;font-size:11.5px}
+.ovt tbody th{position:sticky;left:0;background:var(--card);font-weight:900;color:var(--c);min-width:92px;z-index:1;border-right:1px solid var(--line)}
+.ovt td button{display:block;width:100%;text-align:left;font:inherit;font-size:13px;line-height:1.35;border:0;border-left:3px solid var(--c);background:var(--tile);color:var(--ink);padding:3px 7px;margin:0 0 4px;border-radius:4px;cursor:pointer}
+.ovt td button:hover{background:var(--pill)}
+.ovt td .no{color:var(--line)}
+.ovn{font-size:13px;color:var(--ink2);margin:10px 0 0}
+.steps{list-style:none;margin:22px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:14px;counter-reset:s}
+.steps li{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 16px 14px;counter-increment:s;min-width:0}
+.steps li::before{content:counter(s);display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:#CECC31;color:#2E3410;font-weight:900;margin-bottom:8px}
+.steps b{display:block;font-size:17px}
+.steps span{font-size:14px;color:var(--ink2)}
+.hnote{margin:16px 0 0;padding:12px 16px;background:var(--tile);border-radius:12px;font-size:14px;color:var(--ink2)}
+.hbtn{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+.hbtn .btn{margin-top:0;font:inherit;font-weight:700;cursor:pointer;border:2px solid var(--ink)}
+.hbtn a.btn.alt{border-color:var(--ink)}
+@media(max-width:860px){.steps{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.steps{grid-template-columns:1fr}}
+#ov{position:fixed;inset:0;background:rgba(40,32,20,.45);z-index:20}
+.sheet{position:fixed;z-index:21;background:var(--bg);color:var(--ink);overflow:auto;-webkit-overflow-scrolling:touch;left:0;right:0;bottom:0;max-height:90vh;border-radius:20px 20px 0 0;box-shadow:0 -8px 30px rgba(0,0,0,.2);animation:up .22s ease}
+@keyframes up{from{transform:translateY(40px);opacity:0}to{transform:none;opacity:1}}
+@media(min-width:760px){.sheet{left:auto;top:0;width:min(560px,92vw);max-height:none;border-radius:20px 0 0 20px;animation:in .22s ease}@keyframes in{from{transform:translateX(40px);opacity:0}to{transform:none;opacity:1}}}
+.shx{position:sticky;top:0;float:right;margin:10px 10px 0 0;z-index:2;width:40px;height:40px;border-radius:50%;border:2px solid var(--ink);background:var(--bg);font:inherit;font-size:20px;cursor:pointer;color:var(--ink)}
+.sh-cv{aspect-ratio:21/9;background:color-mix(in srgb,var(--c) 16%,var(--card))}
+.car{position:relative;background:var(--tile)}
+.ct{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;aspect-ratio:3/2}
+.ct::-webkit-scrollbar{display:none}
+.ct img{flex:0 0 100%;width:100%;height:100%;object-fit:cover;object-position:50% 45%;scroll-snap-align:center;display:block}
+.ca{position:absolute;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;border:0;background:rgba(248,242,226,.88);color:var(--ink);font:inherit;font-size:24px;line-height:1;cursor:pointer}
+.ca.p{left:10px}.ca.n{right:10px}
+.cdots{position:absolute;left:0;right:0;bottom:10px;display:flex;justify-content:center;gap:7px}
+.cdots i{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.6);box-shadow:0 0 0 1px rgba(0,0,0,.25)}
+.cdots i.on{background:#fff;transform:scale(1.25)}
+.sh-cv img{width:100%;height:100%;object-fit:cover}
+.sh-in{padding:18px max(20px,env(safe-area-inset-left,0px)) 28px}
+.sh-in h3{margin:4px 0 8px;font-size:24px;font-weight:900;line-height:1.3}
+.sh-in .tg{font-size:13px;font-weight:700;color:var(--c)}
+.sh-in h5{margin:18px 0 4px;font-size:15px;font-weight:900}
+.sh-in p{margin:0;color:var(--ink2);font-size:15px}
+.sh-in ul{margin:0;padding-left:1.2em;color:var(--ink2);font-size:15px}
+.sh-in .meta{margin-top:6px}
+.sh-in .nt{border-left:3px solid var(--line);padding-left:10px}
+.sh-in .px{background:var(--card);border-radius:10px;padding:10px 14px;font-size:15px;color:var(--ink)}
+.sheet button.b-a,.sheet button.b-d{font:inherit;font-weight:700;border-radius:999px;padding:6px 20px;cursor:pointer;font-size:15px}
+.sh-act{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.sh-act a{font:inherit;font-weight:700;font-size:15px;border:2px solid var(--ink);color:var(--ink);text-decoration:none;border-radius:999px;padding:4px 18px}
+.rel{display:flex;gap:8px;flex-wrap:wrap}
+.rel button{font:inherit;font-size:14px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:2px 14px;cursor:pointer}
+.ll{list-style:none;margin:10px 0 0;padding:0}
+.ll li{display:flex;gap:10px;align-items:center;padding:8px 0;border-bottom:1px solid var(--line);font-size:15px}
+.ll li span{flex:1}
+.ll li small{color:var(--ink2)}
+.ll button{border:0;background:none;font-size:18px;cursor:pointer;color:var(--ink2)}
+.sh-in textarea{width:100%;min-height:210px;font:inherit;font-size:14px;line-height:1.6;border:2px solid var(--line);border-radius:12px;background:var(--input);color:var(--ink);padding:12px;resize:vertical}
+.cpd{color:var(--green-d);font-weight:700;margin-left:6px}
+#listBtn{position:fixed;left:max(16px,env(safe-area-inset-left,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:6;border:2px solid #2E3410;background:#CECC31;color:#2E3410;font:inherit;font-weight:900;border-radius:999px;padding:8px 20px;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.18)}
+@media(prefers-reduced-motion:reduce){.sheet{animation:none}.cd.flash{animation:none}}
+[src*="/ill_"]{object-fit:contain!important;padding:10px;box-sizing:border-box}.sh-cv:has(img[src*="/ill_"]){aspect-ratio:16/9}
+
+/* ---------- 預約提示 ---------- */
+#gbar{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(76px + env(safe-area-inset-bottom,0px));z-index:7;width:min(560px,calc(100% - 32px));display:flex;align-items:center;justify-content:space-between;gap:10px;background:var(--ink);color:var(--bg);padding:10px 10px 10px 18px;border-radius:999px;box-shadow:0 6px 22px rgba(0,0,0,.28);animation:gup .3s ease}
+#gbar[hidden]{display:none}
+@keyframes gup{from{opacity:0;transform:translate(-50%,16px)}to{opacity:1;transform:translate(-50%,0)}}
+#gbar .gbt{font-size:14px;line-height:1.35}#gbar .gbt b{margin-right:6px}
+#gbar .gba{display:flex;gap:6px;flex:none}
+#gbar button{font:inherit;cursor:pointer;border-radius:999px;border:0}
+#gbar .gby{background:#CECC31;color:#2E3410;font-weight:900;padding:8px 16px}
+#gbar .gbn{background:transparent;color:var(--bg);width:36px;height:36px;font-size:16px;border:1px solid rgba(255,255,255,.35)}
+#tst{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(76px + env(safe-area-inset-bottom,0px));z-index:7;width:min(460px,calc(100% - 32px));background:var(--ink);color:var(--bg);padding:12px 16px;border-radius:16px;font-size:14px;line-height:1.5;box-shadow:0 6px 22px rgba(0,0,0,.28)}
+#tst[hidden]{display:none}#tst button{font:inherit;background:none;border:0;color:#CECC31;font-weight:900;text-decoration:underline;cursor:pointer;padding:0 0 0 6px}
+.gd{padding:22px 22px 26px}.gd h3{margin:0 0 4px;font-size:22px}.gd .gs{margin:0 0 16px;color:var(--ink2);font-size:14px}
+.gd ol{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.gd li{display:flex;gap:14px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px}
+.gd .n{font-style:normal;flex:none;width:34px;height:34px;border-radius:50%;background:#CECC31;color:#2E3410;font-weight:900;display:grid;place-items:center}
+.gd li b{display:block;font-size:16px;margin-bottom:2px}.gd li span{font-size:14px;color:var(--ink2);line-height:1.55}
+.gd .gnote{margin:14px 0 0;font-size:13px;color:var(--ink2);line-height:1.6}
+.gd .gb{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.gd .gb .btn{margin-top:0;font:inherit;font-weight:700;cursor:pointer;border:2px solid var(--ink);text-align:center}
+.gd .gb .btn.alt{border-color:var(--ink)}
+@media(prefers-reduced-motion:reduce){#gbar{animation:none}}
+
+/* ---------- 右側進度捷徑 / 收合 ---------- */
+#rail{position:fixed;right:max(2px,env(safe-area-inset-right,0px));top:50%;transform:translateY(-50%);z-index:6;display:flex;flex-direction:column;align-items:flex-end}
+#rail::before{content:"";position:absolute;right:10px;top:16px;bottom:16px;border-left:2px dashed var(--ink2);opacity:.55}
+#rail a{position:relative;display:flex;align-items:center;justify-content:flex-end;height:34px;min-width:32px;text-decoration:none;-webkit-tap-highlight-color:transparent}
+#rail a i{flex:none;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--t-nature);margin-right:5px;position:relative;z-index:1;transition:transform .2s,background .2s}
+#rail a span{position:absolute;right:26px;background:var(--ink);color:var(--bg);font-size:12px;line-height:1.7;padding:0 10px;border-radius:999px;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .2s}
+#rail a.past i{background:var(--t-nature)}
+#rail a.on i{background:var(--t-nature);transform:scale(1.45);box-shadow:0 0 0 4px rgba(74,127,165,.25)}
+#rail a.on span,#rail a:focus-visible span,#rail.peek a span{opacity:1}
+#rail.open a span,#rail:hover a span{opacity:1;box-shadow:0 2px 8px rgba(0,0,0,.25)}
+#rail.open a span{pointer-events:auto;font-size:13px;padding:2px 12px}
+#rail.open::before{opacity:.9}
+@media(max-width:900px){main .wrap{padding-right:max(30px,env(safe-area-inset-right,0px))}}
+@media(max-height:480px){#rail{display:none}}
+@media(prefers-reduced-motion:reduce){#rail a i,#rail a span{transition:none}}
+.cd.fold{display:none}
+.more{text-align:center;margin-top:18px}
+.more[hidden]{display:none}
+.more button{font:inherit;font-weight:700;font-size:15px;background:transparent;color:var(--ink);border:2px solid var(--ink);border-radius:999px;padding:8px 26px;cursor:pointer}
+.more button:hover{background:var(--ink);color:var(--bg)}
+.fhint{margin:0;font-size:13px;font-weight:700;color:var(--t-nature)}
+.calw .months{margin-top:6px}
+.nav{transition:transform .25s ease}.nav.hide{transform:translateY(-100%)}
+@media(prefers-reduced-motion:reduce){.nav{transition:none}}
+.meta .tk{color:#fff;font-weight:700}.meta .tk.diy{background:#C2742A}.meta .tk.lab{background:var(--teal-d)}
+</style>
+
+<nav class="nav"><div class="wrap">
+  <a class="brand" href="#top">觸口自然教育中心</a>
+  <a class="l" href="#about">關於中心</a>
+</div></nav>
+
+<main id="home">
+<nav id="rail" aria-label="頁面位置捷徑"></nav>
+<section class="hero" id="top"><div class="wrap">
+  <div>
+    <span class="vol">19期森林學堂．2027.01-12</span>
+    <div class="ttl"><img class="logo" src="logo.webp" alt="觸口自然教育中心標誌"><h1>觸口自然教育中心</h1></div>
+    <div class="en">Chukou Nature Education Center</div>
+    <p>學校、機構、親子、成人團體，都能在這裡找到適合的自然體驗。選好身分，直接查看課程與費用。</p>
+    <a class="btn" href="#guide">找適合我的活動</a>
+  </div>
+  <div class="art"><img src="cover.webp" alt="手繪封面：兩位戴斗笠的孩子在菜園與溪邊，周圍有蜜蜂、蜻蜓和螃蟹" width="1100" height="1015"></div>
+</div></section>
+
+<section id="creatures"><div class="wrap">
+  <div class="eyebrow">Chukou wildlife</div>
+  <h2>認識觸口的生物</h2>
+  <p class="lead">課程裡的每一種生物，都是學員在觸口遇見的鄰居。左右滑動看看牠們。</p>
+  <div class="ctl" data-t="strip"><span>左右拖曳或點箭頭看更多；點生物可到台灣生物多樣性網絡（TBN）看介紹</span><button type="button" data-dir="-1" aria-label="往前">‹</button><button type="button" data-dir="1" aria-label="往後">›</button></div>
+  <div class="strip hstrip" tabindex="0" aria-label="觸口生物圖卡，可左右捲動，會循環" id="strip" style="margin-top:8px"></div>
+  <div class="inat">
+    <a class="btn alt" href="https://www.inaturalist.org/projects/84d817e4-212e-4fa0-8fb4-6064bd34520f" target="_blank" rel="noopener">到 iNaturalist 看觸口的觀察紀錄</a>
+    <span>iNaturalist 專案收錄大家在觸口拍到的物種，會在新分頁開啟。</span>
+  </div>
+</div></section>
+
+<section class="guide" id="guide" style="padding-bottom:36px"><div class="wrap">
+  <div class="eyebrow">Find right activity for you</div>
+  <h2>找到適合自己的活動</h2>
+  <p class="lead">選你的身分，直接看適合的課程。想預約或了解細節，歡迎私訊<a href="https://www.facebook.com/cycknc" target="_blank" rel="noopener" style="text-decoration:underline">觸口自然教育中心臉書粉絲專頁</a>，或來電 05-259-0211，最晚請於一個月前申請。</p>
+  <p class="q">你的身分是？</p>
+  <div class="gcols">
+    <div class="gcol">
+      <div class="pet"><img src="g_frog.webp" alt="戴學士帽的青蛙" height="112"></div>
+      <div class="gbt" style="--c:var(--green)"><small>學校</small><strong>戶外教學</strong>
+        <div class="pills"><span>幼兒園</span><span>國小</span><span>國中</span><span>高中</span><span>大學</span></div>
+        <a class="go" href="#school">看課程</a></div>
+      <div class="gbt" style="--c:var(--green)"><small>補習班／機構</small><strong>跨齡樂學</strong>
+        <div class="pills"><span>生態探索</span><span>氣候韌性</span><span>多元文化</span></div>
+        <a class="go" href="#agency">看課程</a></div>
+    </div>
+    <div class="gcol">
+      <div class="pet mid"><img src="g_butter.webp" alt="抱著小鳥的貓頭鷹" height="112"></div>
+      <div class="gbt" style="--c:var(--mauve)"><small>親子團／散客</small><strong>共學選修日</strong>
+        <div class="pills"><span>木育生活</span><span>公民科學</span><span>生態保育</span></div>
+        <a class="go" href="#family">看課程</a></div>
+      <p class="note">不限年齡，全家大小<br>都適合的共學活動</p>
+    </div>
+    <div class="gcol">
+      <div class="pet right"><img src="g_owl.webp" alt="藍色的鳳蝶" height="140"></div>
+      <div class="gbt" style="--c:var(--teal-d)"><small>散客</small><strong>共學選修日</strong>
+        <div class="pills"><span>木育生活</span><span>公民科學</span><span>生態保育</span></div>
+        <a class="go" href="#family" style="background:var(--teal)">看課程</a></div>
+      <div class="gbt" style="--c:var(--teal-d)"><small>機關團體／樂齡團</small><strong>成人團體</strong>
+        <div class="pills"><span>環教時數</span><span>增能研習</span><span>森林療癒</span><span>森林經營</span></div>
+        <a class="go" href="#adult" style="background:var(--teal)">看課程</a></div>
+    </div>
+  </div>
+</div></section>
+
+<section class="sec" id="annual"><div class="wrap">
+  <div class="eyebrow">2027 annual open activities</div><h2>年度定期活動日曆</h2>
+  <p class="who">三五好友想一起參加？假日想找親子戶外活動？把日期記進手機行事曆，或加入觸口 LINE 社群就不會錯過新活動。過夜型活動請於兩個月前報名；中心不時也會推出快閃活動，請關注臉書粉絲專頁。</p>
+  <details class="ovw calw"><summary>查看 2027 年度日曆（共 9 場活動）</summary>
+  <div class="months" id="months"></div>
+  <div class="legend"><span><i style="background:var(--mauve)"></i>單日活動</span><span><i style="background:var(--teal-d)"></i>過夜行程</span><span>點活動名稱可跳到課程介紹</span></div>
+  </details>
+</div></section>
+
+<div class="finder"><div class="wrap">
+  <div class="search">
+    <input id="q" type="search" placeholder="搜尋活動名稱或關鍵字，例如：木工、碳、烏龜" aria-label="搜尋活動">
+    <span id="qn"></span>
+  </div>
+</div></div>
+
+<section class="sec" id="school"><div class="wrap">
+  <div class="eyebrow">For schools</div><h2>學校戶外教學</h2>
+  <p class="who">適合：公私立幼兒園、國中小至大學生。各課程的「上限人數」為一次可接待的人數與班數。</p>
+  <div id="overview"></div>
+  <div class="fbar" id="fb_school"></div><p class="fcount" id="fc_school"></p>
+  <div class="empty" id="em_school" hidden></div>
+  <div id="schoolList"></div>
+</div></section>
+
+<section class="sec band" id="agency"><div class="wrap">
+  <div class="eyebrow">For institutions</div><h2>跨齡樂學</h2>
+  <p class="who">適合：補習班、安親班、教育機構、親子共學團。對象涵蓋幼兒、國小、國中、高中、成人與親子。</p>
+  <div class="fbar" id="fb_agency"></div><p class="fcount" id="fc_agency"></p>
+  <div class="empty" id="em_agency" hidden></div>
+  <div id="agencyList"></div>
+</div></section>
+
+<section class="sec" id="family"><div class="wrap">
+  <div class="eyebrow">Family day</div><h2>共學選修日</h2>
+  <p class="who">適合：親子家庭、親子散客、對主題有興趣的散客。想帶孩子一起學習，或參加特定主題？揪不到團沒關係，挑一個日期報名吧！單日型活動於活動前一個月開放報名。</p>
+  <p class="fcount" id="fc_family"></p><div class="empty" id="em_family" hidden></div>
+  <div id="familyList"></div>
+</div></section>
+
+<section class="sec band" id="adult"><div class="wrap">
+  <div class="eyebrow">For adult groups</div><h2>成人團體</h2>
+  <p class="who">適合：機關團體進修、公司研習、社會人士休閒療育。</p>
+  <div class="fbar" id="fb_adult"></div><p class="fcount" id="fc_adult"></p>
+  <div class="empty" id="em_adult" hidden></div>
+  <div id="adultList"></div>
+</div></section>
+
+<section class="sec" id="moments"><div class="wrap">
+  <div class="eyebrow">Bonus</div><h2>一時二刻的自然野趣小時光</h2>
+  <p class="who">為行程加點料！想讓活動更豐富嗎？難得來一趟觸口，用 1.5 小時補充你的自然能量。每人計價。想為行程加點料，歡迎私訊臉書粉絲專頁或來電 05-259-0211 洽詢。</p>
+  <div class="fbar" id="fb_moments"></div><p class="fcount" id="fc_moments"></p>
+  <div class="empty" id="em_moments" hidden></div>
+  <div id="momentsList"></div>
+</div></section>
+
+
+<section class="sec band" id="howto"><div class="wrap">
+  <div class="eyebrow">How to book</div><h2>如何預約</h2>
+  <p class="who">不用填表單：把想上的課加進「清單」，複製訊息，私訊我們的臉書粉絲專頁就可以了。</p>
+  <ol class="steps">
+    <li><b>挑課程，加入清單</b><span>在課程卡片按「＋ 加入清單」，可以加好幾門。</span></li>
+    <li><b>複製訊息</b><span>打開「我的清單」，按「複製訊息」，補上單位、人數與希望日期。</span></li>
+    <li><b>私訊粉絲專頁</b><span>到臉書粉絲專頁貼上並送出，也可以來電 05-259-0211。</span></li>
+    <li><b>等我們回覆</b><span>中心確認場次、費用與細節後，會回覆您後續流程。</span></li>
+  </ol>
+  <p class="hnote">申請時間：團體活動最晚請於一個月前申請；過夜型活動請於兩個月前報名；共學選修日的單日型活動於活動前一個月開放報名。</p>
+  <div class="hbtn"><button type="button" class="btn" id="howList">查看我的清單<span id="howCount"></span></button><button type="button" class="btn alt" data-guide>看 3 步驟圖解</button><a class="btn alt" href="https://www.facebook.com/cycknc" target="_blank" rel="noopener">前往粉絲專頁 ↗</a></div>
+</div></section>
+<section class="contact" id="contact"><div class="wrap cgrid">
+  <div class="cl">
+    <h2>想預約或了解細節？</h2>
+    <p class="cin">歡迎私訊臉書粉絲專頁或來電洽詢，最晚請於一個月前申請。</p>
+    <dl class="cinfo">
+      <div><dt>電話</dt><dd class="tel">05-259-0211</dd></div>
+      <div><dt>信箱</dt><dd><a href="mailto:cycknc@gmail.com">cycknc@gmail.com</a></dd></div>
+      <div><dt>位置</dt><dd><a class="gm" href="https://maps.app.goo.gl/RDg2o7PzbKLs3HMF9" target="_blank" rel="noopener">在 Google 地圖查看 ↗</a></dd></div>
+    </dl>
+  </div>
+  <div class="cr2">
+    <h3>追蹤我們</h3>
+    <p>活動消息與報名，最快都在這裡。</p>
+    <div class="soc" aria-label="社群連結">
+    <a href="https://www.facebook.com/cycknc" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 22v-8h2.7l.5-3.2h-3.2V8.9c0-.9.4-1.7 1.8-1.7h1.5V4.4c-.3 0-1.3-.2-2.5-.2-2.6 0-4.3 1.6-4.3 4.4v2.2H7v3.2h3V22z"/></svg>Facebook</a>
+    <a href="https://line.me/ti/g2/XExKbOr1Asx8vH4YDUVBgl4IgNMzU3rfGNCrkg?utm_source=invitation&amp;utm_medium=link_copy&amp;utm_campaign=default" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3C6.9 3 3 6.2 3 10.2c0 3.5 3.1 6.4 7.3 7l-.4 2.6c-.1.5.4.8.8.5l4.4-3C18.800 16.200 21 13.400 21 10.200 21 6.200 17.100 3 12 3zM8.400 12.200H6.700V8.400h.9v2.900h.8zm1.800 0h-.9V8.400h.9zm4 0h-.9l-1.700-2.300v2.300h-.9V8.400h.9l1.700 2.300V8.400h.9zm3-2.900h-1.700v.8h1.700v.8h-1.700v.8h1.700v.9h-2.600V8.400h2.600z"/></svg>LINE 社群</a>
+    <a href="https://www.instagram.com/chukounc/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.500 3h9A4.500 4.500 0 0 1 21 7.500v9a4.500 4.500 0 0 1-4.500 4.500h-9A4.500 4.500 0 0 1 3 16.500v-9A4.500 4.500 0 0 1 7.500 3zm0 1.800A2.700 2.700 0 0 0 4.800 7.500v9a2.700 2.700 0 0 0 2.700 2.700h9a2.700 2.700 0 0 0 2.700-2.700v-9a2.700 2.700 0 0 0-2.700-2.700zM12 7.500a4.500 4.500 0 1 1 0 9 4.500 4.500 0 0 1 0-9zm0 1.800a2.700 2.700 0 1 0 0 5.400 2.700 2.700 0 0 0 0-5.400zm4.800-2.900a1.050 1.050 0 1 1 0 2.100 1.050 1.050 0 0 1 0-2.100z"/></svg>Instagram</a>
+    <a href="https://www.threads.com/@chukounc?hl=zh-tw" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.200 21.500c-3.800 0-6.600-2.500-6.600-6.800V9.300c0-4.300 2.800-6.800 6.600-6.800 3 0 5.200 1.500 6 4.100l-1.800.6c-.6-1.800-2-2.800-4.200-2.800-2.800 0-4.700 1.800-4.700 5v5.300c0 3.200 1.900 5 4.700 5 2.400 0 3.900-1.200 3.900-3 0-1.600-1.300-2.600-3.500-2.600-1.400 0-2.400.6-2.400 1.600 0 .8.700 1.300 1.700 1.300 1.300 0 2.200-.8 2.200-2.300v-2.800h1.800v2.800c0 2.300-1.600 4.100-4 4.100-2 0-3.500-1.100-3.500-2.800 0-1.800 1.600-3.100 4.200-3.100 3 0 5.300 1.600 5.300 4.300 0 2.700-2.300 4.700-5.700 4.700z"/></svg>Threads</a>
+  </div>
+  </div>
+</div></section>
+</main>
+
+<main id="aboutview" class="about" hidden>
+<section><div class="wrap">
+  <a href="#top" class="back">← 回到課程</a>
+  <h2 style="margin-top:18px">關於觸口自然教育中心</h2>
+  <p class="lead">農業部林業及自然保育署嘉義分署觸口自然教育中心</p>
+</div></section>
+<section style="padding-top:0"><div class="wrap">
+  <div class="eyebrow">A message from the branch director</div>
+  <h2>分署長的話</h2>
+  <div class="msg" style="margin-top:18px">
+    <p>面對全球氣候變遷的嚴峻挑戰，「以自然為本的解決方案（NbS）」已成為守護地球的關鍵途徑。林業及自然保育署嘉義分署觸口自然教育中心作為嘉南地區重要的環境教育推廣基地，長年致力於將深奧的林業知識與生態保育轉化為貼近生活的學習體驗。多年來，中心不斷推陳出新，從能源議題的韌性森活實踐、全齡層的森林療癒體驗，到引領大眾關注原生生物的生存課題，每一次的教育體驗，都在為社會種下理解自然的種子。</p>
+    <p>116 年度我們結合「韌性森活」與「永續森林經營」，深化木育的教育理念。我們將帶領學員走進自然、林木量測與低碳生活串聯成完整的教學地圖，讓孩子與成人都能走出課本，在真實的自然環境中學習。在這裡，大家不僅能理解林木固碳與微氣候調節的生態智慧，更能透過國產材木藝手作與餘木再利用，親自體會「一木一物」得來不易的珍惜精神。</p>
+    <p>教育是一場深刻的連結。衷心期待您在觸口自然教育中心留下美好足跡，與我們一起在森林裡汲取智慧，將對山林的關懷化為日常生活的實際行動，共同譜寫人與自然永續共榮的新篇章！</p>
+    <p class="sig">農業部林業及自然保育署嘉義分署　分署長　李定忠</p>
+  </div>
+</div></section>
+<section class="band"><div class="wrap">
+  <div class="eyebrow">Our mission &amp; vision</div>
+  <h2>宗旨與願景</h2>
+  <dl class="mv">
+    <dt>宗旨</dt><dd>師法自然、快樂學習、共創永續</dd>
+    <dt>願景</dt><dd>促進公眾參與永續森林經營，發掘與傳達在地的環境倫理，成為國際推動環境學習之典範。</dd>
+  </dl>
+  <div class="themes">
+    <div class="th" style="background:var(--t-forest)"><h3>永續森林經營</h3><p>人工林固碳減緩暖化，提供木材與棲地，有益身心健康及環境永續。</p></div>
+    <div class="th" style="background:var(--t-nature)"><h3>自然保育議題</h3><p>山林開放後，人與野生動物的共存刻不容緩。</p></div>
+    <div class="th" style="background:var(--t-resil)"><h3>韌性森活</h3><p>氣候變遷下，透過韌性教育促進與自然的互動，學習適應未來的能力。</p></div>
+  </div>
+</div></section>
+<section><div class="wrap">
+  <div class="eyebrow">Sustainable development goals</div>
+  <h2>SDGs 永續發展目標</h2>
+  <p class="lead" style="max-width:40em">2015 年聯合國發表「2030 永續發展目標」，包含 17 項需全球公民合作的重要目標及 230 項子指標。我們將 SDGs 以議題教育呈現，讓學員立足在地、放眼國際，認識國際議題並與自身行為連結，培養成為地球公民。</p>
+</div></section>
+</main>
+
+<button id="toTop" type="button" aria-label="回到最上層">↑</button>
+<div id="ov" hidden></div>
+<aside class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sh-t" hidden><button type="button" class="shx" aria-label="關閉">✕</button><div id="shbody"></div></aside>
+<button type="button" id="listBtn" hidden></button>
+<div id="gbar" role="region" aria-label="預約提示" hidden><span class="gbt"><b>第一次來？</b>3 步驟完成預約，不用填表單</span><span class="gba"><button type="button" class="gby" data-guide>看流程</button><button type="button" class="gbn" id="gno" aria-label="關閉提示">✕</button></span></div>
+<div id="tst" role="status" aria-live="polite" hidden></div>
+
+<footer><div class="wrap">農業部林業及自然保育署嘉義分署 觸口自然教育中心 ・ 19期森林學堂 2027.01–12 ・ 價格與名額以報名時公告為準</div></footer>
+
+<script>
+/* ---------- creatures ---------- */
+var CR=[['civet', '白鼻心'], ['damselfly', '朱背樸蟌'], ['kestrel', '赤腹鷹'], ['bats', '東亞家蝠'], ['skink', '長尾南蜥'], ['monkeys', '台灣獼猴'], ['butterfly', '熙灰蝶'], ['beetle', '獨角仙'], ['emerald', '翠翼鳩'], ['wagtail', '白鶺鴒'], ['drongo', '大卷尾'], ['tit', '黃尾鴝'], ['redbird', '朱鸝'], ['snake', '雨傘節'], ['lunamoth', '長尾水青蛾'], ['crowflower', '紫斑蝶與高士佛澤蘭'], ['wax', '小青蛾蠟蟬'], ['taro', '姑婆芋'], ['soapberry', '無患子'], ['tallow', '烏臼'], ['mulberry', '小葉桑'], ['berry', '竹柏']];
+var TBN={'白鼻心':'https://www.tbn.org.tw/taxa/b20f4f14-efc7-4031-a9a2-dd1729839f27','朱背樸蟌':'https://www.tbn.org.tw/taxa/9fc539ea-c6ad-4f6a-ac67-3f09624b7e7e','赤腹鷹':'https://www.tbn.org.tw/taxa/361a3560-d085-4fd2-b6f6-521f4c8049a5','東亞家蝠':'https://www.tbn.org.tw/taxa/972e9adb-b068-4169-b97d-bef9eac71825','長尾南蜥':'https://www.tbn.org.tw/taxa/85a463d0-5328-49ea-8e2f-f5d546304ca7','台灣獼猴':'https://www.tbn.org.tw/taxa/1ef26ce6-3221-41a6-bd30-46ce27bf49c6','獨角仙':'https://www.tbn.org.tw/taxa/8fa3b3cb-7b16-42f8-add2-011ecf34f6cf','翠翼鳩':'https://www.tbn.org.tw/taxa/41908017-ab7c-4f18-a0e4-dd9d5b646d62','白鶺鴒':'https://www.tbn.org.tw/taxa/4c55ba23-9205-47ed-a9e2-868a312c96bc','大卷尾':'https://www.tbn.org.tw/taxa/c0af0a31-1087-4601-b1b6-945642537e16','黃尾鴝':'https://www.tbn.org.tw/taxa/8fba2500-e64d-4aae-b88e-202070b2659a','朱鸝':'https://www.tbn.org.tw/taxa/c6e1b358-4b60-4303-9e60-93d3076d76fb','雨傘節':'https://www.tbn.org.tw/taxa/3acaf9a3-16e8-4d2d-be7b-b1d8fa293456','長尾水青蛾':'https://www.tbn.org.tw/taxa/66f64aa1-68db-4b82-8158-cda7da60eb7a','紫斑蝶與高士佛澤蘭':'https://www.tbn.org.tw/taxa/41c0c5bc-65d2-4479-a0c8-94af6651915c','姑婆芋':'https://www.tbn.org.tw/taxa/8a98c839-fd85-4851-bc9e-0c5d533c7d1e','無患子':'https://www.tbn.org.tw/taxa/a9c92fef-aef7-432e-9716-f11094d17908','烏臼':'https://tbd.tbn.org.tw/botanic-taxon/4761','小葉桑':'https://www.tbn.org.tw/taxa/68a1430c-ced1-4e45-8c00-46a8fd389174','竹柏':'https://www.tbn.org.tw/taxa/de107366-b71f-413f-a7c0-f637fbf2a187','熙灰蝶':'https://www.tbn.org.tw/taxa/3aa7a1fe-e833-411b-907a-f1832ea24222','小青蛾蠟蟬':'https://www.tbn.org.tw/taxa/6c25b175-b341-4fc2-8f3c-f2eb73feb49e'};
+(function(){
+  var st=document.getElementById('strip');
+  var one=CR.map(function(c){var u=TBN[c[1]],t=u?'a':'div',at=u?' href="'+u+'" target="_blank" rel="noopener" title="到台灣生物多樣性網絡看'+c[1]+'的介紹（新分頁）"':'';return '<'+t+' class="cr"'+at+'><div class="ph"><img src="'+c[0]+'.webp" alt="手繪的'+c[1]+'"></div><div class="nm">'+c[1]+(u?'<small>TBN 物種介紹 ↗</small>':'')+'</div></'+t+'>'}).join('');
+  var clone=one.replace(/alt="[^"]*"/g,'alt=""').replace(/<a class="cr"/g,'<a tabindex="-1" class="cr"');
+  st.innerHTML='<div class="cp" aria-hidden="true" style="display:contents">'+clone+'</div>'+one+'<div class="cp" aria-hidden="true" style="display:contents">'+clone+'</div>';
+  st.style.scrollSnapType='none';
+  var n=CR.length;
+  function setW(){return st.children.length?0:0}
+  function sw(){var a=st.querySelectorAll('.cr');return a[n].offsetLeft-a[0].offsetLeft}
+  var W=sw();st.scrollLeft=W;
+  function wrap(){W=sw();if(st.scrollLeft<W*0.4)st.scrollLeft+=W;else if(st.scrollLeft>W*1.6)st.scrollLeft-=W}
+  st.addEventListener('scroll',wrap,{passive:true});
+  window.addEventListener('resize',function(){W=sw()});
+})();
+
+/* ---------- course data (from 19期手冊 P.7–22) ---------- */
+var TH={nat:['自然保育議題','var(--t-nature)'],for:['永續森林經營','var(--t-forest)'],res:['韌性森活','var(--t-resil)']};
+var SP='學校 半日 $110/人・全日 $130/人；非學校 $160/人', SP1='學校 $110/人；非學校 $160/人';
+var RP='學校 全日 $320/人・半日 $240/人；非學校 $370/人';
+var SCHOOL=[
+ {th:'nat',n:'特派任務',g:[4,6],m:['3 / 4.5 小時','上限 60 人・2 班'],p:SP,d:'「工欲善其事，必先利其器」首先瞭解自然觀察時需要準備的工具，並透過選擇與分析，規劃外出觀察的能力。接著練習捕捉昆蟲的 8 字掃網法及望遠鏡的操作方式，並外出觀察自然及挑戰感官體驗的關卡，在瞭解不同的觀察方法之餘，培養團隊合作的能力。',o:['認識野外觀察所需裝備及注意事項。','學會正確操作觀察工具，並具備環境倫理觀念。','藉由感官體驗活動，培養對環境的觀察能力。','培養團隊默契與互助合作的精神。']},
+ {th:'nat',n:'觸口山獸神',g:[5,6],m:['3 / 4.5 小時','上限 60 人・2 班'],p:SP,d:'野生動物的家，讓我們一起來守護！以尋找野生動物痕跡的活動來認識其棲地，並透過遊戲體驗及瞭解野生動物生存的危機，最後反思與討論不同地區的野生動物時事議題，培養道德實踐與公民意識的價值觀。',o:['認識野生動物與棲地之間的依存關係。','瞭解野生動物保育面對人類、環境與氣候變遷的挑戰。','尊重生命並從日常生活中落實生態保育的行動。']},
+ {th:'nat',n:'賽恩斯行動',g:[7,12],m:['5 小時','上限 30 人・1 班'],p:SP1,d:'科學研究從觀察與發現問題開始，接著提出假設並驗證。運用園區兩溪流做基礎進行調查，認識水生生物與水文的關係等等，透過採樣、整理數據、分析與討論，實踐公民科學家的精神。',o:['認識動、植物與環境間的關聯。','培養學生觀察、發現問題與解決問題的能力。','學習公民科學的調查方法。']},
+ {th:'for',n:'一起玩自然',g:[0,0],m:['1.5 小時','上限 40 人・1 班'],p:SP1,d:'自然探索是現代學生較為缺乏的環境體驗，在自然環境中以團隊合作方式挑戰用眼睛觀察、用耳朵聆聽、用手觸摸自然物等環境教育活動，開啟對大自然的好奇心，最後回顧與分享本次自然探索成果，引發欣賞並愛惜自然的生活態度。',o:['學習團隊合作，共同探索自然。','培養欣賞自然的美感素養並愛惜的生活態度。','練習溝通與表達自己的感想。']},
+ {th:'for',n:'大樹好朋友',g:[1,2],m:['3 / 4.5 小時','上限 80 人・2 班'],p:SP,d:'大樹是許多生物的家，認識樹的生長過程及其構造與功能，建立森林健康植群的觀念；學習簡易丈量樹的方法並分組練習，同時親近與認識大樹附近的環境與生物，並用自然素材創作並分享，增加溝通表達、藝術感知、創作與鑑賞能力。',o:['認識樹的構造、功能與環境。','團隊合作討論並操作簡易丈量樹木的方法。','利用自然素材創作，培養藝術涵養與美感素養。']},
+ {th:'for',n:'繽紛多彩的世界',g:[1,3],m:['3 / 4.5 小時','上限 80 人・2 班'],p:SP,d:'繽紛多彩的自然有許多生物躲在裡面，透過遊戲、練習等方式認識保護色的觀念並尋找自然中的小生物，練習描述生物的方法，最後用自然素材創作獨特的藝術作品。',o:['認識生物「保護色」的觀念，並培養環境覺知與敏感度的能力。','團隊合作觀察自然並練習描述生物的方法。','利用自然素材創作，培養藝術涵養與美感素養。']},
+ {th:'for',n:'荒野歷險記',g:[3,9],m:['3 小時','上限 80 人・2 班'],p:SP1,d:'學習在野外利用自然物判別方向的能力，並透過方格迷宮活動來訓練如何判讀地圖，最後分組體驗「定向運動」競賽，培養解決問題與團隊合作的能力。',o:['學會利用自然物來判別方向及地圖判讀。','認識定向運動的規則與操作。','培養團隊互動合作之精神。']},
+ {th:'for',n:'觸口時光機',g:[7,12],m:['4.5 小時','上限 30 人・1 班'],p:SP1,d:'透過模擬地質風化過程的活動認識地質景觀及化石的形成，並到鄰近的八掌溪河床尋找從阿里山沖刷下來的化石，瞭解化石與不同資源的形成過程，接著透過經營開採資源公司的桌遊活動，瞭解可再生與不可再生資源的差異性，最後探討生活行為與資源的關係，傳達永續使用資源的概念。',nt:'本課程會驅車外出至八掌溪河床探勘化石。',o:['瞭解地景地貌形成過程。','理解化石形成原因及化石在地質學中的角色。','傳達資源永續使用概念。']},
+ {th:'for',n:'森林調查先修班',g:[7,12],m:['3 / 4.5 小時','上限 30 人・1 班'],p:SP,d:'每一個人都不可以錯過的第一堂森林課！森林不是只有樹木與動物，森林也在我們看不到的地方默默的幫助我們。課程中透過科學實驗，讓難以理解的碳匯及水土保持議題變簡單！包含「森林解密行動」與「森林水世界」兩個單元。',o:['森林解密行動：瞭解生活中碳排放與氣候變遷的關聯性。','森林解密行動：認識森林環境監測的方法與監測數據的意義。','森林解密行動：覺知永續森林經營管理的重要及對碳吸存的影響。','森林解密行動：認同自我碳足跡管理的必要與永續森林的經營。','森林水世界：瞭解森林涵養水資源之價值。','森林水世界：學習透過實驗、調查與長期監測，瞭解森林在水資源保護上的功能。','森林水世界：瞭解不同的土地利用形式，會對水土保持帶來不同程度災害的影響。']},
+ {th:'for',n:'孩子的第一堂無痕山林課',g:[5,9],m:['3 小時','上限 30 人・1 班'],p:SP1,d:'近年戶外活動盛行，然而也產生了不少環境問題，本堂課將帶領學員認識「無痕山林運動」，到森林中實踐無痕山林準則達到對環境友善的探索自然方式。接著參考糧食準備及用火準則將食材進行烹煮，藉由實際的身體力行來學習無痕山林。',o:['認識無痕山林七大準則。','瞭解用火安全。','實際使用爐具烹煮食材。']},
+ {th:'res',n:'陽台綠寶箱',tg:'循環經濟',g:[5,6],m:['3 / 4.5 小時'],p:RP,d:'從陽台空間出發，透過園藝技巧，打造「綠寶箱」。不僅將綠意帶入生活，更是提升居家環境氣候韌性、實踐永續自給的開始。',o:['學習自然生態系在永續生活中的重要性。','掌握友善環境的堆肥與節水種植技術。','將生態與循環概念應用於陽台，提升居家的氣候韌性。','製作寶特瓶盆栽 DIY。']},
+ {th:'res',n:'資源循環　森森不息',tg:'循環經濟',g:[5,6],m:['3 / 4.5 小時'],p:RP,d:'探索森林資源利用及理解永續林業。並發想遊戲與校園行動解方，思考如何將自然的循環應用於校園及生活。',o:['了解森林生態系的循環。','理解現代林業如何透過循環經濟模式達成固碳與永續經營。','應用資源循環智慧，討論如何在校園與生活中實踐資源的利用與管理。']},
+ {th:'res',n:'綠意盎然　轉動能源',tg:'自然解方',g:[5,6],m:['3 / 4.5 小時'],p:RP,d:'理解綠意館綠建築的巧妙設計，並思考如何運用自然智慧結合科技，打造能有效適應氣候變遷，又與環境共存的節能生活。',o:['了解綠建築如何降低能源消耗並提升室內舒適度。','辨識綠意館內有助於建築適應氣候變遷的設施與設計策略。','建立對能源效率與環境友善的責任感。']},
+ {th:'res',n:'綠色居家進化術',tg:'自然解方',g:[5,6],m:['3 / 4.5 小時'],p:RP,d:'探索大自然巧妙的降溫智慧。透過觀察、科學測量與創新設計挑戰，辨識不同環境下的微氣候，共創友善環境及應對氣候衝擊的生活空間。',o:['探究大自然降溫智慧。','辨識不同環境的微氣候。','學習運用低碳方法，創造具氣候韌性的環境。']},
+ {th:'res',n:'自然能量大解密',tg:'再生能源',g:[5,6],m:['3 / 4.5 小時'],p:RP,d:'引導學員透過太陽能實驗與案例，探索自然能量的應用潛力。理解再生能源在台灣的使用現況與趨勢，掌握邁向永續家園的能源智慧。',o:['理解太陽能的原理與應用。','探究熱能傳播機制。','透過遊戲學習再生能源在台灣的多元應用與趨勢。']},
+ {th:'res',n:'美食碳險家',g:[5,13],m:['4.5 小時','上限 30 人・1 班'],p:'學校 全日 $480/人（含午餐）・半日 $330/人（含點心）',d:'您化身「美食碳險家」，透過遊戲與實作，解析食物碳足跡，探索從產地到餐桌的碳排放旅程。了解在地與當季食材的重要性，並學習如何運用低碳烹飪與資源循環的智慧！',o:['了解食物碳足跡的構成與計算方法。','掌握在地與當季食材的重要性，選擇低碳食材。','將所學轉化為日常行動，提升飲食的氣候韌性。']}
+];
+var FA='親子家庭及4年級以上';
+var AGENCY=[
+ {grp:'半日遊｜約 3 小時',n:'定向運動體驗賽',m:[FA,'上限 80 人・2 班'],p:'$160/人',d:'化身野外尋寶獵人！先在室內學習觀察太陽與自然物等辨別方位，接著到草皮透過遊戲練習「正置地圖」與方向判讀。掌握定向規則後，3 至 4 人組隊手持專用地圖在園區展開定向運動競賽，發揮團隊默契尋找檢查點奪得榮譽獎勵！',o:['學會利用自然現象辨別方位，並掌握正置地圖的基本判讀技巧。','透過遊戲與尋寶任務，鍛鍊地圖與現場空間對照力。','實地組隊參與園區定向運動競賽，建立溝通協調與團隊合作默契。']},
+ {grp:'半日遊｜約 3 小時',n:'觸口蟹蟹泥',m:[FA,'上限 40 人・1 班'],p:'$370/人',d:'走進園區拜訪珍稀的「臺灣南海溪蟹」！透過護卵闖關遊戲與原創影片，認識陸蟹面臨的生存考驗；接著跑關實地踏查棲地，近距離觀察活體螃蟹構造並體驗觸摸。最後化身自然創作家，撿拾樹枝搭配木片，親手組裝出一隻專屬的立體木造螃蟹帶回家！',o:['透過護卵模擬遊戲與影片，認識南海溪蟹特徵與生存危機。','實地踏查棲地並近距離觀察活體，學習安全觸摸與觀察技巧。','撿拾自然落枝結合木片進行組裝創作，鍛鍊手作立體造型能力。']},
+ {grp:'半日遊｜約 3 小時',n:'種子新兵日記',m:['親子家庭及 1–3 年級','上限 80 人・2 班'],p:'$160/人',d:'種子陸海空三軍大集合！先透過趣味兵種分類認識風力、水力與動物傳播，接著出發踏查園區，親手體驗旋轉翅果、漂水種子或無患子起泡等神奇特性。室內則運用瓊崖海棠、銀葉樹等自然素材，在安全引導下動手彩繪創作專屬鳥笛或種子造型帶回家！',o:['透過陸海空三軍趣味情境，認識植物種子多樣的散播機制。','實地走訪園區觀察特色植物，運用觸摸與操作體驗種子特性。','善用天然種子素材彩繪與組裝，親手完成獨一無二的手作藝品。']},
+ {grp:'半日遊｜約 3 小時',n:'山山惹人愛',m:[FA,'上限 40 人・1 班'],p:'$210/人',d:'化身登山隊展開攻頂挑戰！室內透過情境遊戲判讀天候與登山路線，在體力與負重限制下挑選裝備，跨組合作化解迷途等突發事件；戶外實地踏查園區，學習辨識泥濘與危險地形、合力突破路況，在實戰中建立安全互助的登山觀念。',o:['學會判讀登山基礎資訊與負重限制，完成裝備評估與取捨。','透過情境模擬演練野外應變，建立團隊協調與資源共享能力。','實地踏查步道並辨識潛在危險地形，提升戶外安全防護意識。']},
+ {grp:'半日遊｜約 3 小時',n:'狩獵奇蹟',m:[FA,'上限 30 人・1 班'],p:'$210/人',d:'戶外透過「獵人與獵物」實境追逐遊戲熱身，體驗荒野生存張力；室內則挑戰中心原創策略桌遊，化身部落獵人合力迎戰十年生存考驗。在擲骰、抽牌與資源枯竭的危機中，透過失敗摸索出分享食物與分工策略，領悟原住民狩獵文化與生態禁忌背後的永續智慧。',o:['透過戶外角色追逐遊戲，體驗獵人與獵物間的互動與生存競爭。','參與原創策略桌遊推演，在動態危機中鍛鍊團隊溝通與資源協調。','從桌遊機制的得失中，理解原民文化分享精神與永續生態智慧。']},
+ {grp:'一日遊｜約 4.5–5.5 小時',n:'碳煮跡實驗室',m:[FA,'上限 40 人・1 班'],p:'$480/人（含午餐）',d:'走進大地廚房當低碳大廚！上午化身大廚師，在百種食材選擇遊戲中揭開隱藏碳排真相；中午前往戶外廚房，現採園區植物、撿拾修枝柴燒開伙，親手烹煮時令低碳午餐。餐後落實堆肥與中水回收，完整體驗從產地到餐桌的零浪費全循環！',o:['透過食材卡牌盲選與數值揭露，建立飲食選擇與碳足跡的關聯。','認識當季在地食材並採集可食植物，學習利用天然柴火烹飪料理。','親自操作廚餘堆肥與中水回收，體驗友善環境的資源循環生活。']},
+ {grp:'多日遊｜3–5 天',n:'阿里山獵人成長營',date:'1/22（五）–1/24（日）',m:['3 天 2 夜',FA,'上限 30 人・1 班'],p:'費用請洽中心',d:'走進山美部落，化身山林守護者！首日於觸口紮營，建立登山與狩獵正知；次日深入部落獵人營地，親手砍竹削製食器、搭建傳統獵寮露宿，夜訪溪谷探索溪蝦生態；第三日踏訪達娜伊谷，領會鄒族敬山哲學。',o:['掌握入山安全知識，破除傳統狩獵迷思。','親手削製竹食器並搭建獵寮，體驗自然取資的野營技能。','夜探溪谷並踏查達娜伊谷，學習鄒族生態永續與敬山智慧。']},
+ {grp:'多日遊｜3–5 天',n:'冬季森林職人營',date:'1/30（六）–2/3（三）',m:['5 天 4 夜','4–7 年級','上限 30 人・1 班'],p:'費用請洽中心',d:'解鎖林業現場的超凡日常！五天四夜全面沉浸觸口園區，從搭帳紮營、夜間生態觀察與定向運動展開；接續化身職人實測每木調查、布置生物陷阱、自製釣竿移除入侵魚種，並親手打磨實用木作。結訓前親自掌勺低碳料理款待家長，展現自信與成長！',o:['親自搭設帳篷並認識園區，建立獨立自主與團隊默契。','實作每木調查與生物調查陷阱，學習森林經營與生態監測方法。','動手製作木藝品並移除外來種，實踐棲地守護精神。','運用在地食材烹調低碳佳餚，於結訓日展現成果與回饋。']}
+];
+var FAMILY=[
+ {n:'小花蔓澤蘭槌染袋',date:'5/8（六）',m:['09:00–12:00','1 年級以上'],p:'$270/人',d:'變身森林守護者！穿上裝備走進觸口森林，親手拔除威脅大樹生長的綠色殺手「小花蔓澤蘭」。接著將採集下的綠葉當作天然顏料，透過敲敲打打的槌染工藝，把葉綠素榨取出來繪製在麻布袋上，化為守護地球的榮譽勳章！',o:['認識外來入侵種小花蔓澤蘭對生態的威脅。','學習植物槌染技巧與天然色素利用。','增進親子間公民實踐的回憶。']},
+ {n:'森林放膽玩',date:'7/3（六）',m:['09:30–11:30','幼兒園'],p:'一大一小 $250/人',d:'帶著孩子一起走進森林玩五感小冒險！挑戰用手手摸出桶子裡指定形狀的種子、用鼻子聞聞葉子的香氣，看看漂浮的種子進水裡會如何「旅行」。透過好玩又安全的自然體驗，讓孩子用身體親近大自然，在探索中建立對大自然的喜歡與好奇心。',o:['透過五感體驗建立對自然物件的基本感官認識。','在遊戲中觀察自然，培養孩子對自然環境的好奇心。','親子在活動中一起合作、增加互動，形成美好的自然共學記憶。']},
+ {n:'手作檜木木筷',date:'8/7（六）',m:['09:00–12:00','3 年級以上'],p:'課程費 $160/人；課程＋材料費 $210/人',d:'你知道老房子拆除後的木頭能重獲新生嗎？帶孩子一起聞聞老檜木的幽香，認識森林永續採伐與固碳的神奇機制。活動使用來自文資銀行的珍貴老屋檜木，透過安全又易學的木工技巧，與孩子一刀一刀刻出專屬的環保木筷，把歷史與溫潤握在手心！',o:['建立「永續森林經營」與「木材固碳生命週期」的正確觀念，翻轉單純禁伐的迷思。','認識材料循環再生價值。','掌握基礎安全木工修整與打磨技巧，在專注操作中鍛鍊精細動作與耐心。','養成自備環保餐具的生活習慣，透過親子共創凝聚對永續生活方式的認同。']},
+ {n:'手作竹製音箱',date:'9/4（六）',m:['09:00–12:00','3 年級以上'],p:'課程費 $210/人；課程＋材料費 $320/人',d:'竹子固碳力強且生長迅速，是極佳的環保建材。本課程帶著大家認識天然竹材優勢與物理擴音原理，透過簡易木工工具學習鋸切與打磨，親手打造免插電手機擴音箱，在手作中落實減塑生活與科學探究。',o:['認識竹子生長週期與優異的固碳特性。','探索天然竹管的腔體結構與物理擴音共振原理，激發日常科學探究興趣。','學習基本量測、鋸切與砂磨等手作工具操作，培養做中學的創客精神。']},
+ {n:'臺灣忍著龜',date:'10/2（六）',m:['09:00–12:00','3 年級以上'],p:'課程費 $220/人；課程＋材料費 $330/人',d:'外來種干擾、棲地破壞及走私行為，讓野生龜類面臨嚴峻的生存壓力。本活動將至龜類保育教育園區參訪，認識第一線人員如何照養這些有家歸不得的烏龜們，並透過遊戲認識棲地破碎化對龜類的影響。',o:['了解設置龜類保育教育園區的目的與意義。','認識臺灣龜類生態與生存困境。','了解生物廊道的重要性。']},
+ {n:'寶庫阿里山',date:'11/13（六）',m:['09:00–18:30','4 年級以上','上限 25 人'],p:'費用請見活動簡章',d:'阿里山是台灣最負盛名的森林遊樂區，神木群除了創造林業與觀光，也孕育豐富的動植物生態，卻不為熙攘的人們所知。跟著我們一起拜訪阿里山，沿途記錄觀察到的生物與環境變化，並彙整於愛自然 APP 專案當中，實踐公民科學家的精神，亦透過阿里山的林業歷史，了解林業發展、人工林管理與永續林業的意涵。',nt:'課程於第一天辦理，夜宿林業保育署員工寄宿舍，第二天於遊樂區內自由活動；主要動線為對高岳步道，需有連續步行 6 小時及負重 5–10 公斤登山的基礎體力。',o:['熟悉愛自然 APP 的習慣，實踐公民科學家精神。','認識阿里山林業發展與永續林業。','感受森林的療癒感。']}
+];
+var ADULT=[
+ {grp:'研習類',n:'環境教育課程規劃與設計',m:['6 小時','上限 30 人・1 班'],p:'$530/人',d:'環境教育是現今地球公民的必修課，對於不同主題與族群應規劃設計符合的課程，以及學習如何將場域與課程結合以展現場域亮點與獨特性。',o:['認識環境教育的意涵與目標。','環境教育課程設計的原理原則。','體驗中心課活動操作。']},
+ {grp:'研習類',n:'環境解說實務與技巧',m:['6 小時','上限 30 人・1 班'],p:'$530/人',d:'環境解說是項專業技能，如何將專業知識轉化為受聽者的吸收方式，並與其生命產生共鳴並須仰賴訓練與學習。活動將帶領學員體驗中心如何透過場域具體資源延伸背景故事，使遊客與環境資源產生互動與連結。完善的環境解說提供受聽者深思與啟發，方可達到教育的效果。',o:['學習環境解說的步驟。','提升學員觀察自然的敏感度。']},
+ {grp:'研習類',n:'森林解密行動',m:['4.5 小時','上限 30 人・1 班'],p:'$320/人',d:'透過觸口森林資源，理解環境教育課程該如何設計及規劃。並以觸口自然教育中心實際案例出發，分享森林裡的環境教育中心營運甘苦談。此課程涵蓋環境教育實務交流、林業保育署轄下自然教育中心營運概況介紹及環境教育教案設計，歡迎環境教育同好及企業 ESG 活動規劃需求預約。',o:['瞭解環境教育課程方案規劃及設計。','以森林資源為例，利用資源盤點選擇適合的環境教育方案。','從生活出發，體驗結合個人經驗及永續森林經營概念的環境教育課程。']},
+ {grp:'休閒類',n:'隨森所遇',date:'11/27（六）',m:['2 天 1 夜','上限 25 人・1 班'],p:'依簡章公告',d:'阿里山的清新的空氣及美麗針葉林，每次漫步在巨木森林中總能讓人感覺到渾身舒暢，讓在地居民引領我們認識阿里山的前世今生、沿著舊鐵道思古情懷，在千年巨木下體驗舒緩瑜珈、學習筋絡按推的手法，讓身體、心靈都得到休息。',nt:'課程於第一天進行，第二天於遊樂區內自行活動；主要動線為受鎮宮→香林國小→香林神木→水山療癒步道，平緩好走，歡迎樂齡者一同參與。',o:['認識阿里山林業的發展。','體驗舒緩瑜珈、學習簡單的筋絡按推手法。','透過深度五感練習感受森林療癒。']},
+ {grp:'休閒類',n:'森活好去觸',m:['4.5 小時','上限 30 人・1 班'],p:'$320/人',d:'蒼鬱的森林除了是野生動物的棲息地，也是讓人們放鬆心情的遊憩場所。日本的研究指出，享受「森林浴」，將五感沐浴在森林氛圍中，有助舒緩壓力、促進健康及愉悅心靈。你有多久沒感受森林的舒壓力量了呢？歡迎來到觸口感受森林浴吧！',o:['感受觸口森林浴。','體驗在森林中舒緩瑜珈，活動身體。','享用在地食材小點心。']},
+ {grp:'休閒類',n:'繪入眼簾－生態插圖設計技巧',m:['4.5 小時','上限 30 人・1 班'],p:'$320/人',d:'在過去相機不普及的時代，科學家以繪圖保存生物的樣貌。繪畫有許多技巧，過去生態繪圖主要做為研究使用而講求精細。如今插圖是資訊傳遞的重要媒介，如何在民眾喜好與生物特徵之間取捨，是當代生物插畫家的重要任務。活動將帶著大家邊觀察生物邊練習插畫技巧。',o:['生態繪圖的技巧。','對於物種的觀察要點。','現場繪圖教學指導。']}
+];
+var MOMENTS=[
+ {grp:'自然探索類',n:'生態桌遊',tg:'桌遊',g:'4 年級以上',p:'$80/人',d:'有哪些生物居住在森林裡並以樹為家？森林裡的樹木面對人為開發可能會遇到那些問題呢？透過桌遊一起邊玩邊認識自然生態吧！'},
+ {grp:'自然探索類',n:'森林遊俠',tg:'職業體驗',g:'1 年級以上',p:'$100/人',d:'森林是陸域最大的碳庫，提供的生態系服務不勝枚舉，保護這些樹木以及認識生長環境與狀況可以更有效增加森林的固碳能力，讓我們體驗森林護管員如何照顧樹木吧！'},
+ {grp:'自然探索類',n:'小小生物觀察家',tg:'自然觀察',g:'1 年級以上',p:'$100/人',d:'觸口生物資源豐富，抬頭仰望、低頭細看總是可以發現各種動植物，學習利用望遠鏡、捕蟲網等工具觀察大自然吧！'},
+ {grp:'自然探索類',n:'瑰寶龜保',tg:'保育現場',g:'1 年級以上',p:'$80/人',d:'台灣的龜類過去隨處可見，如今卻因為棲地破碎、盜獵等問題逐漸消失。透過參訪龜類保育教育園區認識這些有家歸不得的烏龜們背後的故事。'},
+ {grp:'動手創作類',n:'鳥笛嗶嗶',tg:'種子手作',g:'1 年級以上',p:'$100/人',d:'植物有許多特性，加工後運用廣泛。你知道將瓊崖海棠種子內部挖空吹氣，竟然會神奇的發出類似大冠鷲的鳴叫聲！一起來創作有趣的自然玩具吧！'},
+ {grp:'動手創作類',n:'種子木片 DIY',tg:'木片手作',g:'1 年級以上',p:'$120/人',d:'認識園區植物生態環境，利用枯倒木製成的木片及各種各樣的種子進行獨一無二的藝術創作！'},
+ {grp:'動手創作類',n:'碳香午茶時光',tg:'低碳飲食',g:'4 年級以上',p:'$130/人（+$70 可升級烤麵包）',d:'收集園區疏伐枝條作為燃燒能源，並利用特殊設計的爐灶提高燃燒效率，享受節能又低碳還充滿碳香味的下午茶時光！'},
+ {grp:'動手創作類',n:'手洗阿里山愛玉',tg:'在地點心',g:'1 年級以上',p:'$130/人',d:'阿里山生物資源豐富，愛玉更是廣為人知，動手做一碗清涼解渴的愛玉，一解盛夏的炙熱吧！'},
+ {grp:'動手創作類',n:'槌染布',tg:'外來種利用',g:'1 年級以上',p:'$200/人',d:'惡名昭彰的小花蔓澤蘭也能搖身一變成為彩繪的染料！一起化綠癌為藝術作品吧！'},
+ {grp:'動手創作類',n:'小小木匠',tg:'木工體驗',g:'3 年級以上',p:'$100/人',d:'木頭質地各式各樣，即便是同一塊木材也會根據加工方式呈現不同紋理。一起學習使用簡易木工器材將木材加工吧！'}
+];
+
+/* ---------- render ---------- */
+var ALL=[], IMG={'小小生物觀察家':['ill_6'],'瑰寶龜保':['ill_7'],'手洗阿里山愛玉':['ill_8'],'槌染布':['ill_9'],'小小木匠':['ill_10'],'生態桌遊':['ill_1'],'森林遊俠':['ill_2'],'鳥笛嗶嗶':['ill_3'],'種子木片 DIY':['ill_4'],'碳香午茶時光':['ill_5'],'繪入眼簾－生態插圖設計技巧':['draw_1','draw_2','draw_3','draw_4','draw_5','draw_6','draw_7','draw_8','draw_9'],'森活好去觸':['bath_1','bath_2','bath_3','bath_4','bath_5','bath_6','bath_7','bath_8'],'隨森所遇':['forest_1','forest_2','forest_3','forest_4','forest_5','forest_6','forest_7','forest_8','forest_9','forest_10','forest_11','forest_12','forest_13'],'森林解密行動':['decode_1','decode_2','decode_3','decode_4'],'環境解說實務與技巧':['interp_1','interp_2','interp_3'],'環境教育課程規劃與設計':['eedu_1','eedu_2','eedu_3','eedu_4','eedu_5','eedu_6','eedu_7'],'寶庫阿里山':['ali_1','ali_2','ali_3','ali_4','ali_5','ali_6'],'臺灣忍著龜':['turtle_1','turtle_2','turtle_3','turtle_4','turtle_5'],'手作竹製音箱':['bamboo_1','bamboo_2','bamboo_3'],'手作檜木木筷':['chop_1','chop_2','chop_3','chop_4','chop_5','chop_6','chop_7','chop_8'],'森林放膽玩':['bold_1','bold_2','bold_3','bold_4','bold_5'],'小花蔓澤蘭槌染袋':['vine_1','vine_2','vine_3','vine_4','vine_5'],'冬季森林職人營':['winter_1','winter_2','winter_3','winter_4','winter_5','winter_6','winter_7','winter_8','winter_9','winter_10','winter_11','winter_12','winter_13','winter_14','winter_15','winter_16','winter_17','winter_18','winter_19','winter_20'],'阿里山獵人成長營':['hunter_1','hunter_2','hunter_3','hunter_4','hunter_5','hunter_6','hunter_7','hunter_8','hunter_9','hunter_10','hunter_11','hunter_12','hunter_13','hunter_14'],'碳煮跡實驗室':['tan_1','tan_2','tan_3','tan_4','tan_5','tan_6'],'狩獵奇蹟':['hunt_1','hunt_2','hunt_3','hunt_4','hunt_5','hunt_6'],'山山惹人愛':['mount_1','mount_2','mount_3','mount_4','mount_5'],'種子新兵日記':['seed_1','seed_3','seed_4','seed_5','seed_6'],'觸口蟹蟹泥':['crab_1','crab_2','crab_3','crab_4','crab_5','crab_6','crab_7'],'定向運動體驗賽':['ori_1','ori_2','ori_3','ori_4','ori_5','ori_6','ori_7'],'美食碳險家':['carbon_1','carbon_2','carbon_3','carbon_4','carbon_5','carbon_6','carbon_7','carbon_8'],'自然能量大解密':['power_1','power_2','power_3','power_4','power_5','power_6','power_7'],'綠色居家進化術':['home_1','home_2','home_3','home_4','home_5','home_6'],'綠意盎然　轉動能源':['energy_1','energy_2','energy_3','energy_4'],'資源循環　森森不息':['cycle_1','cycle_2','cycle_3','cycle_4'],'陽台綠寶箱':['balcony_1','balcony_2','balcony_3','balcony_4','balcony_5','balcony_6','balcony_7'],'孩子的第一堂無痕山林課':['lnt_1','lnt_2','lnt_3','lnt_4'],'森林調查先修班':['survey_1','survey_2','survey_3','survey_4','survey_5'],'觸口時光機':['time_1','time_2','time_3','time_4','time_5','time_6'],'荒野歷險記':['wild_1','wild_2','wild_3','wild_4','wild_5','wild_6'],'繽紛多彩的世界':['color_1','color_2','color_3','color_4','color_5','color_6','color_7'],'大樹好朋友':['tree_1','tree_2','tree_3','tree_4','tree_5'],'一起玩自然':['play_1','play_2','play_3','play_4','play_5'],'特派任務':['mission_1','mission_2','mission_3','mission_4'],'賽恩斯行動':['science_1','science_2','science_3','science_4'],'觸口山獸神':['beast_1','beast_2','beast_3','beast_4']};
+function imgs(c){return (IMG[c.n]||[]).map(function(f){return 'img/'+f+'.webp'})} /* IMG: 課程名稱 -> 封面圖檔名，例如 IMG['特派任務']='mission.webp'（之後放入） */
+var FB='https://www.facebook.com/cycknc';
+var SECN={school:'戶外教學',agency:'跨齡樂學',family:'共學選修日',adult:'成人團體',moments:'一時二刻'};
+var GB=[['k','幼兒園',0,0,'幼兒園'],['l','低年級',1,2,'1–2 年級'],['m','中年級',3,4,'3–4 年級'],['h','高年級',5,6,'5–6 年級'],['j','國中',7,9,'7–9 年級'],['s','高中',10,12,'10–12 年級'],['u','大學',13,13,'大學']];
+var TH2={'定向運動體驗賽':'out','觸口蟹蟹泥':'eco','種子新兵日記':'eco','山山惹人愛':'out','狩獵奇蹟':'cul','碳煮跡實驗室':'low','阿里山獵人成長營':'cul','冬季森林職人營':'out'};
+function gradeText(g){if(g[0]===0&&g[1]===0)return '幼兒園';if(g[1]>=13)return g[0]+' 年級–大學';return (g[0]===g[1]?g[0]:g[0]+'–'+g[1])+' 年級'}
+var DIYN='大樹好朋友,繽紛多彩的世界,陽台綠寶箱,觸口蟹蟹泥,種子新兵日記,阿里山獵人成長營,冬季森林職人營,小花蔓澤蘭槌染袋,手作檜木木筷,手作竹製音箱,臺灣忍著龜'.split(','),LABN='特派任務,賽恩斯行動,觸口時光機,森林調查先修班,孩子的第一堂無痕山林課,綠色居家進化術,自然能量大解密,美食碳險家,碳煮跡實驗室,阿里山獵人成長營,冬季森林職人營,森林解密行動,森活好去觸,森林遊俠,小小生物觀察家'.split(',');
+function prep(list,sec){list.forEach(function(c){
+  c.sec=sec;c.i=ALL.length;ALL.push(c);
+  c.tags=[];if(DIYN.indexOf(c.n)>=0||(sec==='moments'&&c.grp==='動手創作類'))c.tags.push('DIY');if(LABN.indexOf(c.n)>=0)c.tags.push('實驗/操作');
+  var txt=(c.m||[]).join('|'),mc=txt.match(/上限\s*(\d+)\s*人/);c.cap=mc?+mc[1]:null;
+  if(Array.isArray(c.g))c.gr=c.g;else{
+    var src=[c.g||''].concat(c.m||[]),r=null;
+    src.forEach(function(s){if(r)return;var a;
+      if(a=s.match(/(\d+)\s*[–-]\s*(\d+)\s*年級/))r=[+a[1],+a[2]];
+      else if(a=s.match(/(\d+)\s*年級以上/))r=[+a[1],12];
+      else if(/幼兒園/.test(s))r=[0,0]});
+    c.gr=r}
+  if(sec==='agency'){c.dur=/半日/.test(c.grp)?'half':/一日/.test(c.grp)?'day':'multi';c.t2=TH2[c.n]}
+  if(sec==='adult'){var d=(c.m||[])[0]||'';c.dur=/天/.test(d)?'night':/^6/.test(d)?'6h':'45h'}
+  if(sec==='moments'){var p=c.p.match(/\$(\d+)/);c.pn=p?+p[1]:0}
+})}
+prep(SCHOOL,'school');prep(AGENCY,'agency');prep(FAMILY,'family');prep(ADULT,'adult');prep(MOMENTS,'moments');
+function headPrice(p){var m=p.match(/(?<!\+)\$(\d+)/g);if(!m)return '<em>'+p+'</em>';var n=m.map(function(s){return +s.slice(1)}),a=Math.min.apply(null,n),b=Math.max.apply(null,n);return '<b>$'+a+'</b><em>'+(a!==b?' 起':'')+' /人</em>'}
+function hook(d){var m=d.match(/^[^。！？]+[。！？]?/);return m?m[0]:d}
+function tagOf(c){return [c.sec==='school'?TH[c.th][0]:(c.grp?c.grp.split('｜')[0]:''),c.tg].filter(Boolean).join('・')}
+var FOC={"img/draw_1.webp":"50% 5%","img/draw_2.webp":"50% 5%","img/draw_3.webp":"50% 5%","img/draw_4.webp":"50% 5%","img/draw_5.webp":"50% 5%","img/draw_6.webp":"50% 5%","img/draw_7.webp":"50% 5%","img/draw_8.webp":"50% 5%","img/draw_9.webp":"50% 5%","img/bath_1.webp":"50% 5%","img/bath_2.webp":"50% 5%","img/bath_3.webp":"50% 5%","img/bath_4.webp":"50% 5%","img/bath_5.webp":"50% 5%","img/bath_6.webp":"50% 5%","img/bath_7.webp":"50% 5%","img/bath_8.webp":"50% 5%","img/forest_3.webp":"50% 40%","img/forest_4.webp":"50% 0%","img/forest_8.webp":"50% 40%","img/forest_9.webp":"50% 60%","img/forest_10.webp":"50% 5%","img/forest_11.webp":"50% 98%","img/forest_12.webp":"50% 5%","img/decode_1.webp":"50% 5%","img/decode_2.webp":"50% 40%","img/decode_3.webp":"50% 5%","img/decode_4.webp":"50% 5%","img/interp_1.webp":"50% 88%","img/interp_2.webp":"50% 5%","img/interp_3.webp":"50% 5%","img/eedu_1.webp":"50% 5%","img/eedu_2.webp":"50% 5%","img/eedu_3.webp":"50% 70%","img/eedu_4.webp":"50% 5%","img/eedu_5.webp":"50% 40%","img/eedu_6.webp":"50% 5%","img/eedu_7.webp":"50% 5%","img/ali_1.webp":"50% 5%","img/ali_2.webp":"50% 5%","img/ali_3.webp":"50% 5%","img/ali_4.webp":"50% 40%","img/ali_5.webp":"50% 5%","img/ali_6.webp":"50% 5%","img/turtle_1.webp":"50% 5%","img/turtle_2.webp":"50% 5%","img/turtle_3.webp":"50% 40%","img/turtle_4.webp":"50% 5%","img/turtle_5.webp":"50% 5%","img/bamboo_1.webp":"50% 5%","img/bamboo_2.webp":"50% 5%","img/bamboo_3.webp":"50% 5%","img/chop_1.webp":"50% 5%","img/chop_2.webp":"50% 5%","img/chop_3.webp":"50% 5%","img/chop_4.webp":"50% 5%","img/chop_5.webp":"50% 5%","img/chop_6.webp":"50% 5%","img/chop_7.webp":"50% 5%","img/chop_8.webp":"50% 5%","img/bold_4.webp":"50% 5%","img/bold_5.webp":"50% 5%","img/vine_1.webp":"50% 5%","img/vine_2.webp":"50% 5%","img/vine_3.webp":"50% 5%","img/vine_4.webp":"50% 5%","img/vine_5.webp":"50% 5%","img/winter_1.webp":"50% 5%","img/winter_2.webp":"50% 5%","img/winter_3.webp":"50% 5%","img/winter_4.webp":"28% 50%","img/winter_5.webp":"50% 5%","img/winter_6.webp":"50% 30%","img/winter_7.webp":"50% 90%","img/winter_8.webp":"50% 5%","img/winter_9.webp":"50% 5%","img/winter_10.webp":"50% 20%","img/winter_11.webp":"50% 40%","img/winter_12.webp":"50% 5%","img/winter_13.webp":"50% 5%","img/winter_14.webp":"50% 5%","img/winter_15.webp":"50% 5%","img/winter_16.webp":"50% 5%","img/winter_17.webp":"50% 5%","img/winter_18.webp":"50% 5%","img/winter_19.webp":"50% 5%","img/winter_20.webp":"50% 5%","img/hunter_1.webp":"50% 5%","img/hunter_2.webp":"50% 5%","img/hunter_3.webp":"50% 5%","img/hunter_4.webp":"50% 5%","img/hunter_5.webp":"50% 5%","img/hunter_6.webp":"50% 5%","img/hunter_11.webp":"50% 5%","img/hunter_12.webp":"50% 5%","img/hunter_13.webp":"50% 5%","img/hunter_14.webp":"50% 5%","img/tan_1.webp":"50% 5%","img/tan_2.webp":"50% 5%","img/tan_3.webp":"50% 5%","img/tan_4.webp":"50% 5%","img/tan_5.webp":"50% 5%","img/tan_6.webp":"50% 5%","img/hunt_1.webp":"50% 5%","img/hunt_2.webp":"50% 5%","img/hunt_3.webp":"50% 5%","img/hunt_4.webp":"50% 5%","img/hunt_5.webp":"50% 5%","img/hunt_6.webp":"50% 5%","img/mount_1.webp":"50% 5%","img/mount_2.webp":"50% 10%","img/mount_3.webp":"50% 5%","img/mount_4.webp":"50% 5%","img/mount_5.webp":"50% 5%","img/seed_3.webp":"50% 5%","img/seed_4.webp":"50% 5%","img/seed_5.webp":"50% 5%","img/seed_6.webp":"50% 5%","img/crab_1.webp":"50% 5%","img/crab_2.webp":"50% 5%","img/crab_3.webp":"50% 5%","img/crab_4.webp":"50% 5%","img/crab_5.webp":"50% 5%","img/crab_6.webp":"50% 5%","img/crab_7.webp":"50% 5%","img/ori_1.webp":"50% 5%","img/ori_2.webp":"50% 5%","img/ori_3.webp":"50% 5%","img/ori_4.webp":"50% 5%","img/ori_5.webp":"50% 5%","img/ori_6.webp":"50% 5%","img/ori_7.webp":"50% 5%","img/carbon_1.webp":"50% 5%","img/carbon_2.webp":"50% 5%","img/carbon_3.webp":"50% 5%","img/carbon_4.webp":"50% 48%","img/carbon_5.webp":"50% 5%","img/carbon_6.webp":"50% 5%","img/carbon_7.webp":"50% 40%","img/carbon_8.webp":"50% 5%","img/power_1.webp":"50% 5%","img/power_2.webp":"50% 5%","img/power_3.webp":"50% 5%","img/power_4.webp":"50% 10%","img/power_5.webp":"50% 5%","img/power_6.webp":"50% 5%","img/power_7.webp":"50% 5%","img/home_1.webp":"50% 5%","img/home_2.webp":"50% 5%","img/home_3.webp":"50% 5%","img/home_4.webp":"50% 5%","img/home_5.webp":"50% 5%","img/home_6.webp":"50% 5%","img/energy_1.webp":"50% 5%","img/energy_2.webp":"50% 5%","img/energy_3.webp":"50% 40%","img/energy_4.webp":"50% 5%","img/cycle_1.webp":"50% 5%","img/cycle_2.webp":"38% 50%","img/cycle_3.webp":"50% 5%","img/cycle_4.webp":"18% 50%","img/balcony_1.webp":"50% 5%","img/balcony_2.webp":"50% 5%","img/balcony_3.webp":"50% 5%","img/balcony_4.webp":"50% 5%","img/balcony_5.webp":"50% 5%","img/balcony_6.webp":"50% 5%","img/balcony_7.webp":"50% 5%","img/lnt_1.webp":"50% 5%","img/lnt_2.webp":"50% 40%","img/lnt_3.webp":"50% 5%","img/lnt_4.webp":"50% 32%","img/survey_1.webp":"50% 5%","img/survey_2.webp":"50% 5%","img/survey_3.webp":"50% 5%","img/survey_4.webp":"50% 5%","img/survey_5.webp":"50% 5%","img/time_1.webp":"50% 5%","img/time_2.webp":"50% 5%","img/time_3.webp":"50% 25%","img/time_4.webp":"50% 5%","img/time_5.webp":"50% 5%","img/time_6.webp":"50% 5%","img/wild_1.webp":"50% 5%","img/wild_2.webp":"50% 5%","img/wild_3.webp":"50% 5%","img/wild_4.webp":"50% 5%","img/wild_5.webp":"50% 5%","img/wild_6.webp":"50% 5%","img/color_1.webp":"50% 5%","img/color_2.webp":"50% 5%","img/color_3.webp":"50% 38%","img/color_4.webp":"50% 8%","img/color_5.webp":"50% 5%","img/color_6.webp":"50% 5%","img/color_7.webp":"50% 5%","img/tree_1.webp":"50% 5%","img/tree_2.webp":"50% 5%","img/tree_3.webp":"50% 5%","img/tree_4.webp":"50% 5%","img/tree_5.webp":"50% 5%","img/play_1.webp":"50% 5%","img/play_2.webp":"50% 52%","img/play_3.webp":"50% 5%","img/play_4.webp":"50% 25%","img/play_5.webp":"50% 5%","img/mission_1.webp":"50% 5%","img/mission_2.webp":"50% 40%","img/mission_3.webp":"50% 5%","img/mission_4.webp":"50% 5%","img/science_1.webp":"50% 5%","img/science_2.webp":"50% 5%","img/science_3.webp":"50% 5%","img/science_4.webp":"50% 40%","img/beast_1.webp":"50% 5%","img/beast_2.webp":"50% 5%","img/beast_3.webp":"50% 5%","img/beast_4.webp":"50% 5%"};
+function thumb(u){return u.indexOf('/ill_')<0?u.replace('.webp','_t.webp'):u}
+function cover(c){var t=tagOf(c),im=imgs(c);return '<div class="cv">'+(im.length?'<img src="'+thumb(im[0])+'" alt="" loading="lazy" decoding="async">':'')+(t?'<span class="tg">'+t+'</span>':'')+'</div>'}
+function metaOf(c){return (c.g?'<span class="gr">'+(typeof c.g==='string'?c.g:gradeText(c.g))+'</span>':'')+(c.tags||[]).map(function(t){return '<span class="tk '+(t==='DIY'?'diy':'lab')+'">'+t+'</span>'}).join('')+(c.m||[]).map(function(x){return '<span>'+x+'</span>'}).join('')}
+function dateOf(c){return c.date?'<div class="dw"><span class="date">'+c.date.replace(/(\d+\/\d+)/g,'<b>$1</b>').replace(/（([^）]+)）/g,'<span class="wk">（$1）</span>')+'</span></div>':''}
+function card(c,col){
+  return '<article class="cd" id="c'+c.i+'" data-i="'+c.i+'" style="--c:'+col+'">'+dateOf(c)+cover(c)+'<div class="cb"><h4>'+c.n+'</h4><div class="meta">'+metaOf(c)+'</div><p class="ds">'+hook(c.d)+'</p><div class="ft"><span class="pc">'+headPrice(c.p)+'</span><button type="button" class="b-d" data-open>看詳情</button><button type="button" class="b-a" data-add>＋ 加入清單</button></div></div></article>'}
+function group(title,items,col,sub){return '<div class="grp" data-grp><h3 style="--c:'+col+'"><i></i>'+title+'</h3>'+(sub?'<p class="sub">'+sub+'</p>':'')+'<div class="cards">'+items.join('')+'</div></div>'}
+function byGrp(list,col){var order=[],map={};list.forEach(function(c){if(!map[c.grp]){map[c.grp]=[];order.push(c.grp)}map[c.grp].push(card(c,col))});return order.map(function(k){return group(k,map[k],col)}).join('')}
+var sh='';
+['nat','for','res'].forEach(function(k){
+  var items=SCHOOL.filter(function(c){return c.th===k}).map(function(c){return card(c,TH[k][1])});
+  var sub=k==='res'?'5–6 年級・3 / 4.5 小時。各課程費用：'+RP+'。':'';
+  sh+=group(TH[k][0],items,TH[k][1],sub);
+});
+document.getElementById('schoolList').innerHTML=sh;
+document.getElementById('agencyList').innerHTML=byGrp(AGENCY,'var(--t-nature)');
+document.getElementById('familyList').innerHTML='<div class="ctl" data-t="famStrip"><span>依日期排列，左右拖曳或點箭頭看更多</span><button type="button" data-dir="-1" aria-label="往前">‹</button><button type="button" data-dir="1" aria-label="往後">›</button></div><div class="grp" data-grp style="margin-top:0"><div class="fam hstrip" tabindex="0" id="famStrip">'+FAMILY.map(function(c){return '<div class="tlitem" data-host><i></i><b>'+c.date.match(/^(\d+)/)[1]+' 月</b>'+card(c,'var(--mauve)')+'</div>'}).join('')+'</div></div>';
+document.getElementById('adultList').innerHTML=byGrp(ADULT,'var(--teal-d)');
+document.getElementById('momentsList').innerHTML=byGrp(MOMENTS,'var(--t-forest)');
+
+/* ---------- 戶外教學總覽表 ---------- */
+(function(){
+  function ov(c,b){return c.gr&&c.gr[0]<=b[3]&&c.gr[1]>=b[2]}
+  var h='<details class="ovw"><summary>戶外教學總覽表（年級 × 主題）</summary><div class="ovs"><table class="ovt"><thead><tr><th></th>'+GB.map(function(b){return '<th>'+b[1]+'<small>'+b[4]+'</small></th>'}).join('')+'</tr></thead><tbody>';
+  ['nat','for','res'].forEach(function(k){
+    h+='<tr style="--c:'+TH[k][1]+'"><th scope="row">'+TH[k][0]+'</th>'+GB.map(function(b){
+      var l=SCHOOL.filter(function(c){return c.th===k&&ov(c,b)});
+      return '<td>'+(l.length?l.map(function(c){return '<button type="button" data-go="'+c.i+'">'+c.n+'</button>'}).join(''):'<span class="no">—</span>')+'</td>'}).join('')+'</tr>'});
+  h+='</tbody></table></div><p class="ovn">點課程名稱可跳到下方卡片。大學、或表中沒有的年齡層，歡迎私訊粉絲專頁討論客製課程。</p></details>';
+  document.getElementById('overview').innerHTML=h;
+})();
+
+/* ---------- 區塊收合 ---------- */
+var SC={school:true,agency:true,adult:true,moments:true},LIM=4;
+['school','agency','adult','moments'].forEach(function(sec){
+  document.getElementById(sec+'List').insertAdjacentHTML('afterend','<div class="more" id="mb_'+sec+'" hidden><button type="button" data-more="'+sec+'"></button></div>')});
+document.addEventListener('click',function(e){var m=e.target.closest('[data-more]');if(!m)return;var k=m.dataset.more;SC[k]=!SC[k];apply();if(SC[k])document.getElementById(k).scrollIntoView({behavior:'smooth'})});
+
+/* ---------- filters ---------- */
+function ovl(c,id){var b=GB.filter(function(x){return x[0]===id})[0];return !!c.gr&&c.gr[0]<=b[3]&&c.gr[1]>=b[2]}
+var capT=function(c,v){return c.cap==null||c.cap>=+v};
+var CAPNOTE='只顯示一次可接待到該人數的課程';
+var FDEF={
+ school:[
+  {k:'th',l:'主題',o:[['nat','自然保育議題'],['for','永續森林經營'],['res','韌性森活']],t:function(c,v){return c.th===v}},
+  {k:'gr',l:'年級',o:GB.map(function(b){return [b[0],b[1]]}),t:ovl},
+  {k:'n',l:'人數',o:[['30','約 30 人'],['60','約 60 人'],['80','約 80 人']],t:capT,h:CAPNOTE},
+  {k:'f',l:'特色',o:[['diy','DIY'],['lab','實驗/操作']],t:function(c,v){return (c.tags||[]).indexOf(v==='diy'?'DIY':'實驗/操作')>=0}}],
+ agency:[
+  {k:'d',l:'停留時間',o:[['half','半日遊'],['day','一日遊'],['multi','多日遊']],t:function(c,v){return c.dur===v}},
+  {k:'n',l:'人數',o:[['30','約 30 人'],['40','約 40 人'],['80','約 80 人']],t:capT,h:CAPNOTE},
+  {k:'t',l:'主題',o:[['eco','自然生態'],['out','戶外技能'],['cul','在地文化'],['low','低碳永續']],t:function(c,v){return c.t2===v}},
+  {k:'f',l:'特色',o:[['diy','DIY'],['lab','實驗/操作']],t:function(c,v){return (c.tags||[]).indexOf(v==='diy'?'DIY':'實驗/操作')>=0}}],
+ adult:[
+  {k:'p',l:'目的',o:[['研習類','研習'],['休閒類','休閒']],t:function(c,v){return c.grp===v}},
+  {k:'d',l:'時長',o:[['45h','4.5 小時'],['6h','6 小時'],['night','過夜']],t:function(c,v){return c.dur===v}},
+  {k:'n',l:'人數',o:[['25','約 25 人'],['30','約 30 人']],t:capT,h:CAPNOTE},
+  {k:'f',l:'特色',o:[['diy','DIY'],['lab','實驗/操作']],t:function(c,v){return (c.tags||[]).indexOf(v==='diy'?'DIY':'實驗/操作')>=0}}],
+ moments:[
+  {k:'p',l:'類型',o:[['自然探索類','自然探索'],['動手創作類','動手創作']],t:function(c,v){return c.grp===v}},
+  {k:'g',l:'年級',o:GB.slice(0,6).map(function(b){return [b[0],b[1]]}),t:ovl},
+  {k:'c',l:'價格',o:[['a','$100 以下'],['b','$101–130'],['c','$131 以上']],t:function(c,v){return v==='a'?c.pn<=100:v==='b'?c.pn>100&&c.pn<=130:c.pn>130}},
+  {k:'f',l:'特色',o:[['diy','DIY'],['lab','實驗/操作']],t:function(c,v){return (c.tags||[]).indexOf(v==='diy'?'DIY':'實驗/操作')>=0}}]
+};
+var FS={school:{},agency:{},adult:{},moments:{},family:{}};
+var q=document.getElementById('q'),qn=document.getElementById('qn');
+function mkBar(sec){
+  var box=document.getElementById('fb_'+sec);if(!box)return;
+  var hint=document.createElement('p');hint.className='fhint';hint.textContent='不知道選哪堂？先用下面的條件縮小範圍 ↓';box.appendChild(hint);
+  FDEF[sec].forEach(function(f){
+    var row=document.createElement('div');row.className='chips';row.setAttribute('role','group');row.setAttribute('aria-label','依'+f.l+'篩選');
+    row.innerHTML='<b>'+f.l+'</b>';
+    [['all','全部']].concat(f.o).forEach(function(o){
+      var b=document.createElement('button');b.type='button';b.className='chip';b.textContent=o[1];b.dataset.v=o[0];b.setAttribute('aria-pressed',o[0]==='all'?'true':'false');
+      b.onclick=function(){FS[sec][f.k]=o[0]==='all'?null:(FS[sec][f.k]===o[0]?null:o[0]);syncBar(sec);apply()};
+      row.appendChild(b)});
+    if(f.h){var s=document.createElement('small');s.textContent='（'+f.h+'）';row.appendChild(s)}
+    box.appendChild(row)});
+}
+function syncBar(sec){
+  var box=document.getElementById('fb_'+sec);if(!box)return;
+  FDEF[sec].forEach(function(f,i){
+    Array.prototype.forEach.call(box.querySelectorAll('.chips')[i].querySelectorAll('.chip'),function(b){
+      var on=b.dataset.v==='all'?!FS[sec][f.k]:FS[sec][f.k]===b.dataset.v;b.setAttribute('aria-pressed',on?'true':'false')})})
+}
+['school','agency','adult','moments'].forEach(mkBar);
+function resetSec(sec){FS[sec]={};syncBar(sec)}
+function resetAll(){['school','agency','adult','moments'].forEach(resetSec);q.value='';apply()}
+function apply(){
+  var term=q.value.trim().toLowerCase(),total=0,secShown={};
+  ALL.forEach(function(c){
+    var el=document.getElementById('c'+c.i),ok=true;
+    (FDEF[c.sec]||[]).forEach(function(f){var v=FS[c.sec][f.k];if(ok&&v&&!f.t(c,v))ok=false});
+    if(ok&&term){var tx=el.textContent+' '+c.d+' '+(c.o||[]).join(' ');if(tx.toLowerCase().indexOf(term)<0)ok=false}
+    el.hidden=!ok;var host=el.closest('[data-host]');if(host)host.hidden=!ok;
+    if(ok){total++;secShown[c.sec]=(secShown[c.sec]||0)+1}
+  });
+  ['school','agency','adult','moments'].forEach(function(sec){
+    var all=document.querySelectorAll('#'+sec+' .cd');Array.prototype.forEach.call(all,function(el){el.classList.remove('fold')});
+    var fa=Object.keys(FS[sec]).some(function(k){return FS[sec][k]}),free=!term&&!fa;
+    var vis=Array.prototype.filter.call(all,function(el){return !el.hidden});
+    if(SC[sec]&&free)vis.forEach(function(el,i){if(i>=LIM)el.classList.add('fold')});
+    var mb=document.getElementById('mb_'+sec);mb.hidden=!(free&&vis.length>LIM);
+    mb.firstChild.textContent=SC[sec]?'看全部 '+vis.length+' 門課 ▾':'收合 ▴';
+  });
+  Array.prototype.forEach.call(document.querySelectorAll('[data-grp]'),function(g){g.hidden=!g.querySelector('.cd:not([hidden]):not(.fold)')});
+  Object.keys(SECN).forEach(function(sec){
+    var fc=document.getElementById('fc_'+sec),em=document.getElementById('em_'+sec);if(!fc)return;
+    var act=term||Object.keys(FS[sec]).some(function(k){return FS[sec][k]}),n=secShown[sec]||0;
+    fc.innerHTML=act?'符合 '+n+' 項<button type="button" data-reset="'+sec+'">清除條件</button>':'';
+    var big=sec==='school'&&FS.school.gr==='u';
+    em.hidden=n>0;
+    em.innerHTML=n>0?'':'<b>'+(big?'目前沒有固定的大學生課程':'沒有符合條件的活動')+'</b>可以放寬條件再看看，或'+'<a href="'+FB+'" target="_blank" rel="noopener">私訊粉絲專頁</a>，我們可以一起討論客製課程。';
+  });
+  qn.textContent=term?'符合 '+total+' 項活動':'';
+}
+q.addEventListener('input',apply);
+document.addEventListener('click',function(e){var r=e.target.closest('[data-reset]');if(r){resetSec(r.dataset.reset);if(q.value){q.value=''}apply()}});
+
+/* ---------- 行程清單 ---------- */
+var LIST=[];
+try{var sv=JSON.parse(localStorage.getItem('ckl19')||'[]');sv.forEach(function(n){var c=ALL.filter(function(x){return x.n===n})[0];if(c)LIST.push(c.i)})}catch(e){}
+function saveList(){try{localStorage.setItem('ckl19',JSON.stringify(LIST.map(function(i){return ALL[i].n})))}catch(e){}}
+function inList(i){return LIST.indexOf(i)>=0}
+function syncAdd(){
+  Array.prototype.forEach.call(document.querySelectorAll('[data-add]'),function(b){
+    var ai=b.getAttribute('data-add-i'),i=ai!==null?+ai:+b.closest('[data-i]').dataset.i,on=inList(i);
+    b.classList.toggle('on',on);b.textContent=on?'✓ 已加入':'＋ 加入清單'});
+  var lb=document.getElementById('listBtn');lb.hidden=!LIST.length;lb.textContent='我的清單（'+LIST.length+'）';
+  var hc=document.getElementById('howCount');if(hc)hc.textContent=LIST.length?'（'+LIST.length+'）':'';
+}
+function toggleList(i){var k=LIST.indexOf(i);if(k>=0)LIST.splice(k,1);else LIST.push(i);saveList();syncAdd();if(sheetMode==='list')showList()}
+function msgText(){
+  var l=LIST.map(function(i,k){var c=ALL[i];return (k+1)+'. 【'+SECN[c.sec]+'】'+c.n+(c.date?'（'+c.date+'）':'')}).join('\n');
+  return '您好，我想詢問觸口自然教育中心的課程：\n'+(l||'（請先在網頁加入想詢問的課程）')+'\n\n團體／單位：\n預計人數：\n希望日期：\n聯絡人與方式：\n\n謝謝！'}
+
+/* ---------- sheet ---------- */
+var sh_=document.getElementById('sheet'),ovl_=document.getElementById('ov'),shb=document.getElementById('shbody'),sheetMode='',lastF=null;
+var carT=null;
+function stopCar(){if(carT){clearInterval(carT);carT=null}}
+function startCar(ct){
+  stopCar();var paused=false;
+  var par=ct.parentNode;
+  par.addEventListener('mouseenter',function(){paused=true});par.addEventListener('mouseleave',function(){paused=false});
+  par.addEventListener('touchstart',function(){paused=true},{passive:true});par.addEventListener('touchend',function(){setTimeout(function(){paused=false},4000)},{passive:true});
+  carT=setInterval(function(){
+    if(paused||!document.body.contains(ct))return;
+    var w=ct.clientWidth,k=Math.round(ct.scrollLeft/w),n=ct.children.length;
+    ct.scrollTo({left:((k+1)%n)*w,behavior:'smooth'});
+  },3000);
+}
+function openSheet(html,mode){
+  stopCar();sheetMode=mode;shb.innerHTML=html;
+  if(sh_.hidden){lastF=document.activeElement;sh_.hidden=false;ovl_.hidden=false;document.body.style.overflow='hidden'}
+  sh_.scrollTop=0;sh_.querySelector('.shx').focus({preventScroll:true});
+}
+function closeSheet(){stopCar();if(sh_.hidden)return;sh_.hidden=true;ovl_.hidden=true;sheetMode='';document.body.style.overflow='';if(lastF&&lastF.focus)lastF.focus({preventScroll:true})}
+function carousel(c){
+  var im=imgs(c);if(!im.length)return '<div class="sh-cv"></div>';
+  if(im.length===1)return '<div class="sh-cv"><img src="'+im[0]+'" alt=""></div>';
+  return '<div class="car"><div class="ct" data-ct>'+im.map(function(u,k){return '<img src="'+u+'" alt="'+c.n+' 照片 '+(k+1)+'" loading="lazy" decoding="async"'+(FOC[u]?' style="object-position:'+FOC[u]+'"':'')+'>'}).join('')+'</div><button type="button" class="ca p" data-car="-1" aria-label="上一張">‹</button><button type="button" class="ca n" data-car="1" aria-label="下一張">›</button><div class="cdots">'+im.map(function(u,k){return '<i'+(k?'':' class="on"')+'></i>'}).join('')+'</div></div>'}
+function showDetail(i){
+  var c=ALL[i],col=c.sec==='school'?TH[c.th][1]:c.sec==='agency'?'var(--t-nature)':c.sec==='family'?'var(--mauve)':c.sec==='adult'?'var(--teal-d)':'var(--t-forest)';
+  var rel=ALL.filter(function(x){return x.sec===c.sec&&x.i!==i&&(c.th?x.th===c.th:c.grp?x.grp===c.grp:true)}).slice(0,4);
+  var h='<div style="--c:'+col+'">'+carousel(c)+'<div class="sh-in">'
+   +'<div class="tg">'+(SECN[c.sec]+(tagOf(c)?'・'+tagOf(c):''))+'</div><h3 id="sh-t">'+c.n+'</h3>'+(c.date?'<div>'+dateOf(c).replace('class="dw"','class="dw" style="background:none;padding:0"')+'</div>':'')
+   +'<div class="meta">'+metaOf(c)+'</div>'
+   +'<h5>費用</h5><p class="px">'+c.p+'</p>'
+   +'<h5>課程介紹</h5><p>'+c.d+'</p>'
+   +(c.o?'<h5>學習目標</h5><ul>'+c.o.map(function(x){return '<li>'+x+'</li>'}).join('')+'</ul>':'')
+   +(c.nt?'<h5>備註</h5><p class="nt">'+c.nt+'</p>':'')
+   +'<div class="sh-act"><button type="button" class="b-a'+(inList(i)?' on':'')+'" data-add data-add-i="'+i+'">'+(inList(i)?'✓ 已加入':'＋ 加入清單')+'</button><a href="#howto" data-how>如何預約</a></div>'
+   +'<p style="margin-top:10px;font-size:13px">想預約？把課程加入清單，複製訊息後私訊粉絲專頁即可。</p>'
+   +(rel.length?'<h5>你可能也會喜歡</h5><div class="rel">'+rel.map(function(x){return '<button type="button" data-det="'+x.i+'">'+x.n+'</button>'}).join('')+'</div>':'')
+   +'</div></div>';
+  openSheet(h,'detail');
+  var ct=shb.querySelector('[data-ct]');
+  if(ct)startCar(ct);
+  if(ct)ct.addEventListener('scroll',function(){var k=Math.round(ct.scrollLeft/ct.clientWidth);Array.prototype.forEach.call(ct.parentNode.querySelectorAll('.cdots i'),function(d,j){d.classList.toggle('on',j===k)})},{passive:true});
+}
+function showList(){
+  var h='<div class="sh-in"><h3 id="sh-t">我的清單</h3>';
+  if(!LIST.length){h+='<p>清單還是空的。在課程卡片按「＋ 加入清單」，就能一次整理想詢問的課程。</p>'}
+  else{
+    h+='<ul class="ll">'+LIST.map(function(i){var c=ALL[i];return '<li><span>'+c.n+'<br><small>'+SECN[c.sec]+(c.date?'・'+c.date:'')+'</small></span><button type="button" data-rm="'+i+'" aria-label="移除 '+c.n+'">✕</button></li>'}).join('')+'</ul>'
+     +'<h5>① 複製訊息，並補上空白欄位</h5><textarea id="msg" readonly>'+msgText()+'</textarea>'
+     +'<div class="sh-act"><button type="button" class="b-a" id="cpy" style="--c:var(--ink)">複製訊息</button><span class="cpd" id="cpd"></span></div>'
+     +'<h5>② 到臉書粉絲專頁貼上並送出私訊</h5>'
+     +'<div class="sh-act" style="margin-top:6px"><a href="'+FB+'" target="_blank" rel="noopener">前往粉絲專頁 ↗</a><a href="tel:0525902110">或來電 05-259-0211</a></div>'
+     +'<p style="margin-top:12px;font-size:13px">申請最晚請於活動前一個月；過夜型活動請於兩個月前。中心確認後會回覆您。</p>'}
+  h+='</div>';openSheet(h,'list');
+}
+function copyMsg(){
+  var ta=document.getElementById('msg'),t=ta.value,done=function(){document.getElementById('cpd').textContent='已複製！請到粉專貼上'};
+  function fb(){ta.focus();ta.select();try{document.execCommand('copy')&&done()}catch(e){}}
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,fb)}else fb();
+}
+document.addEventListener('click',function(e){
+  var t=e.target,b;
+  if(b=t.closest('[data-add]')){e.stopPropagation();var i=b.getAttribute('data-add-i');i=i!=null?+i:+b.closest('[data-i]').dataset.i;toggleList(i);hintAdd(i);return}
+  if(b=t.closest('[data-car]')){var tr=b.parentNode.querySelector('[data-ct]');tr.scrollBy({left:tr.clientWidth*(+b.dataset.car),behavior:'smooth'});return}
+  if(b=t.closest('[data-det]')){showDetail(+b.dataset.det);return}
+  if(b=t.closest('[data-rm]')){toggleList(+b.dataset.rm);return}
+  if(t.closest('#cpy')){copyMsg();return}
+  if(t.closest('.shx')||t.id==='ov'){closeSheet();return}
+  if(b=t.closest('[data-guide]')){e.preventDefault();showGuide();return}
+  if(t.closest('[data-gclose]')){closeSheet();return}
+  if(t.closest('[data-how]')){closeSheet();return}
+  if(t.closest('#listBtn')||t.closest('#howList')){showList();return}
+  if(b=t.closest('[data-go]')){reveal('c'+b.dataset.go,true);return}
+  if(t.closest('a'))return;
+  if(b=t.closest('.cd')){showDetail(+b.dataset.i)}
+});
+document.addEventListener('keydown',function(e){
+  if(e.key==='Escape')closeSheet();
+  if((e.key==='Enter'||e.key===' ')&&e.target.classList&&e.target.classList.contains('cd')){e.preventDefault();showDetail(+e.target.dataset.i)}
+});
+Array.prototype.forEach.call(document.querySelectorAll('.cd'),function(c){c.tabIndex=0;c.setAttribute('role','button');c.setAttribute('aria-label','查看 '+c.querySelector('h4').textContent+' 詳情')});
+function reveal(id,reset){
+  var c=ALL[+id.slice(1)];if(SC[c.sec]){SC[c.sec]=false;if(reset===false)apply()}
+  if(reset!==false){resetSec(c.sec);q.value='';apply()}
+  var el=document.getElementById(id);if(!el)return;
+  el.scrollIntoView({behavior:'smooth',block:'center',inline:'center'});
+  el.classList.remove('flash');void el.offsetWidth;el.classList.add('flash');
+}
+syncAdd();apply();
+
+/* ---------- card ids, calendar ---------- */
+var idByName={};
+ALL.forEach(function(c){if(!idByName[c.n])idByName[c.n]='c'+c.i});
+var EV=[
+ {s:[1,22],e:[1,24],n:'阿里山獵人成長營',t:2},{s:[1,30],e:[2,3],n:'冬季森林職人營',t:2},
+ {s:[5,8],n:'小花蔓澤蘭槌染袋',t:1},{s:[7,3],n:'森林放膽玩',t:1},{s:[8,7],n:'手作檜木木筷',t:1},
+ {s:[9,4],n:'手作竹製音箱',t:1},{s:[10,2],n:'臺灣忍著龜',t:1},{s:[11,13],n:'寶庫阿里山',t:2},{s:[11,27],n:'隨森所遇',t:2}];
+function key(a){return a[0]*100+a[1]}
+(function(){
+  var months=[1,2,5,7,8,9,10,11],wd=['日','一','二','三','四','五','六'],out='';
+  months.forEach(function(m){
+    var first=new Date(2027,m-1,1).getDay(),days=new Date(2027,m,0).getDate(),rows='<tr>'+'<td></td>'.repeat(first);
+    for(var d=1;d<=days;d++){
+      var ev=EV.filter(function(e){return key([m,d])>=key(e.s)&&key([m,d])<=key(e.e||e.s)})[0];
+      rows+='<td><span'+(ev?' class="e'+ev.t+'" title="'+ev.n+'"':'')+'>'+d+'</span></td>';
+      if((first+d)%7===0&&d<days)rows+='</tr><tr>';
+    }
+    var list=EV.filter(function(e){return m>=e.s[0]&&m<=(e.e?e.e[0]:e.s[0])}).map(function(e){
+      var r=e.e?e.s[0]+'/'+e.s[1]+'–'+(e.e[0]!==e.s[0]?e.e[0]+'/':'')+e.e[1]:e.s[0]+'/'+e.s[1];
+      var id=idByName[e.n];
+      return '<li><i style="background:'+(e.t===1?'var(--mauve)':'var(--teal-d)')+'"></i><span><b>'+r+'</b>　'+(id?'<a href="#'+id+'" data-card="'+id+'">'+e.n+'</a>':e.n)+'</span></li>'}).join('');
+    out+='<div class="mo"><header><b>'+m+' 月</b><small>2027</small></header><table><thead><tr>'+wd.map(function(w){return '<th>'+w+'</th>'}).join('')+'</tr></thead><tbody>'+rows+'</tr></tbody></table><ul>'+list+'</ul></div>';
+  });
+  document.getElementById('months').innerHTML=out;
+  document.getElementById('months').addEventListener('click',function(e){
+    var a=e.target.closest('a[data-card]');if(!a)return;e.preventDefault();
+    reveal(a.dataset.card,true);
+  });
+})();
+
+/* ---------- drag-to-scroll strips ---------- */
+function dragScroll(el){
+  var down=false,lx=0,sx=0,moved=false;
+  el.addEventListener('pointerdown',function(e){if(e.pointerType!=='mouse'||e.button!==0)return;down=true;moved=false;sx=lx=e.clientX});
+  window.addEventListener('pointermove',function(e){if(!down)return;if(!moved&&Math.abs(e.clientX-sx)>5){moved=true;el.classList.add('drag')}if(moved){el.scrollLeft-=e.clientX-lx}lx=e.clientX});
+  window.addEventListener('pointerup',function(){if(!down)return;down=false;setTimeout(function(){el.classList.remove('drag')},0)});
+  el.addEventListener('click',function(e){if(moved){e.preventDefault();e.stopPropagation();moved=false}},true);
+}
+Array.prototype.forEach.call(document.querySelectorAll('.hstrip'),dragScroll);
+Array.prototype.forEach.call(document.querySelectorAll('.ctl button'),function(b){b.addEventListener('click',function(){document.getElementById(b.closest('.ctl').dataset.t).scrollBy({left:b.dataset.dir*(b.closest('.ctl').dataset.t==='strip'?372:330),behavior:'smooth'})})});
+
+/* ---------- back to top ---------- */
+var tt=document.getElementById('toTop');
+window.addEventListener('scroll',function(){tt.classList.toggle('show',window.scrollY>500)},{passive:true});
+tt.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
+
+/* ---------- start at top ---------- */
+try{history.scrollRestoration='manual'}catch(e){}
+if(!location.hash){window.scrollTo(0,0)}
+window.addEventListener('pageshow',function(){if(!location.hash)window.scrollTo(0,0)});
+
+/* ---------- routing ---------- */
+(function(){
+  var home=document.getElementById('home'),about=document.getElementById('aboutview');
+  function route(){
+    var h=location.hash.replace('#',''),isAbout=h==='about';
+    home.hidden=isAbout;about.hidden=!isAbout;
+    if(isAbout){window.scrollTo(0,0);return}
+    if(h){var el=document.getElementById(h);if(el)el.scrollIntoView({behavior:'smooth'})}
+  }
+  window.addEventListener('hashchange',route);route();
+})();
+
+/* ---------- 首次進站提示 / 預約步驟 ---------- */
+function gget(k){try{return localStorage.getItem(k)}catch(e){return null}}
+function gset(k){try{localStorage.setItem(k,'1')}catch(e){}}
+function hideBar(){var b=document.getElementById('gbar');if(b)b.hidden=true}
+function showGuide(){
+  gset('ckg19');hideBar();hideToast();
+  openSheet('<div class="gd"><h3>3 步驟完成預約</h3><p class="gs">不用填表單，也不用註冊帳號。</p><ol>'
+   +'<li><i class="n">1</i><div><b>挑課程，加入清單</b><span>在課程卡片按「＋ 加入清單」，可以加好幾門。</span></div></li>'
+   +'<li><i class="n">2</i><div><b>複製訊息</b><span>按左下角「我的清單」，再按「複製訊息」，補上單位、人數與希望日期。</span></div></li>'
+   +'<li><i class="n">3</i><div><b>私訊粉絲專頁</b><span>到臉書粉絲專頁貼上並送出，也可以來電 05-259-0211。中心確認後會回覆您。</span></div></li>'
+   +'</ol><p class="gnote">團體活動最晚請於一個月前申請；過夜型活動請於兩個月前報名。</p>'
+   +'<div class="gb"><button type="button" class="btn" data-gclose>開始挑課程</button><a class="btn alt" href="#howto" data-how>看完整說明</a><a class="btn alt" href="'+FB+'" target="_blank" rel="noopener">粉絲專頁 ↗</a></div></div>','guide');
+}
+var tstT=null;
+function hideToast(){var t=document.getElementById('tst');if(t)t.hidden=true;if(tstT){clearTimeout(tstT);tstT=null}}
+function hintAdd(i){
+  if(!inList(i)||gget('ckg19')||gget('ckg19t'))return;
+  gset('ckg19t');hideBar();
+  var t=document.getElementById('tst');t.innerHTML='已加入清單！挑完後按左下角「我的清單」複製訊息，再私訊粉專。<button type="button" data-guide>看流程</button>';
+  t.hidden=false;tstT=setTimeout(hideToast,8000);
+}
+(function(){
+  document.getElementById('gno').addEventListener('click',function(){gset('ckg19');hideBar()});
+  if(gget('ckg19')||LIST.length)return;
+  setTimeout(function(){if(gget('ckg19')||!sh_.hidden)return;document.getElementById('gbar').hidden=false},1800);
+})();
+
+/* ---------- 右側進度捷徑 ---------- */
+(function(){
+  var S=[['top','首頁'],['guide','選身分'],['annual','日曆'],['school','學校'],['agency','跨齡'],['family','共學'],['adult','成人'],['moments','野趣'],['howto','預約']];
+  var nav=document.getElementById('rail');
+  nav.innerHTML=S.map(function(x,i){return '<a href="#'+x[0]+'" data-r="'+i+'" aria-label="跳到'+x[1]+'"><i></i><span>'+x[1]+'</span></a>'}).join('');
+  var links=Array.prototype.slice.call(nav.querySelectorAll('a')),els=S.map(function(x){return document.getElementById(x[0])}),tick=false;
+  function upd(){tick=false;var y=window.innerHeight*0.35,a=0;els.forEach(function(e,i){if(e&&e.getBoundingClientRect().top<=y)a=i});
+    links.forEach(function(l,i){l.classList.toggle('on',i===a);l.classList.toggle('past',i<a)})}
+  function req(){if(!tick){tick=true;requestAnimationFrame(upd)}}
+  window.addEventListener('scroll',req,{passive:true});window.addEventListener('resize',req);upd();
+  var canHover=window.matchMedia&&matchMedia('(hover:hover)').matches,closeT=null;
+  function closeRail(){nav.classList.remove('open');if(closeT){clearTimeout(closeT);closeT=null}}
+  nav.addEventListener('click',function(e){var a=e.target.closest('a');if(!a)return;e.preventDefault();
+    if(!canHover&&!nav.classList.contains('open')){nav.classList.remove('peek');nav.classList.add('open');closeT=setTimeout(closeRail,6000);return}
+    closeRail();var el=els[+a.dataset.r];if(el)el.scrollIntoView({behavior:'smooth'})});
+  document.addEventListener('click',function(e){if(!nav.contains(e.target))closeRail()});
+  setTimeout(function(){nav.classList.add('peek');setTimeout(function(){nav.classList.remove('peek')},3500)},2500);
+})();
+
+/* ---------- 頂端列：下滑隱藏、上滑顯示 ---------- */
+(function(){var nav=document.querySelector('.nav'),last=window.scrollY,t=false;
+  window.addEventListener('scroll',function(){if(t)return;t=true;requestAnimationFrame(function(){t=false;var y=window.scrollY,d=y-last;
+    if(y<80||d<-6)nav.classList.remove('hide');else if(d>6)nav.classList.add('hide');
+    if(Math.abs(d)>6||y<80)last=y})},{passive:true});
+})();
+</script>
+
+</body></html>
